@@ -1,7 +1,8 @@
 
 <div align=center>
 
-![image](https://github.com/bllor/Project2023/assets/136154061/7f59fe08-879a-4182-a260-fac95b4114a3)
+![412553f50b838198](https://github.com/jeongminchoi1017/Project/assets/153606946/1c3189d0-7673-4a58-a5d3-d079187617ff)
+
 </div>
 <h1>🛒프로젝트 소개</h1><br>
 스프링부트를 이용한 떡볶이 판매 서비스
@@ -21,7 +22,8 @@
 <br>
 <h1>🌟프로젝트 메인 페이지 소개</h1><br>
 
-![LotteOn 메인페이지](https://github.com/bllor/Project2023/assets/136154061/99dc1a6e-72b0-43fe-b49d-dc5c7b6dd123)
+![스크린샷 2023-12-30 204952](https://github.com/jeongminchoi1017/Project/assets/153606946/0aa8af52-4128-4f2f-8606-ae2e550d6b9a)
+
 <h1>🌝본인 주요 개발기능</h1>
 
 **1.메뉴 관련 기능 구현**<br>
