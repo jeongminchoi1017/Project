@@ -1,0 +1,287 @@
+
+* {
+    font-size: 13px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.my {
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+    width: 1200px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+
+.myBanner {
+    position: relative;
+    left: 227px;
+    width: 855px;
+    height: 100px;
+    border-bottom: 2px solid #A21A24;
+    margin-bottom: 10px;
+}
+.myBanner > h2 {
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    font-weight: bolder;
+}
+/* button */
+.btn.success {
+    background-color: #FF5B2D;
+    border: 1px solid #FF5B2D;
+}
+.btn.success:hover {
+    background-color: #e13f10;
+}
+.social {
+    display: inline-block;
+    width: 200px;
+    height:30px;
+    border-radius: 10px;
+    padding-left: 20px;
+    box-sizing:border-box;
+    line-height:30px;
+    text-align:center;
+}
+#naver-login {
+    background:url("../../images/user/ic-naver-02.png") no-repeat 12px center / 16px 14px #57b04b;
+    color:#fff;
+}
+#kakao-login {
+    background:#ffe812 url("../../images/user/ic-kakao-02.png") no-repeat 13px 7px;
+    background-size:18px 17px;
+    color:#262626;
+}
+#google-login {
+    background:url("../../images/user/ic-google-02.png") no-repeat 12px center / 30px 30px #EFEDEF;
+    color:#262626;
+}
+.btn.modify {
+    width: 50px;
+    border: 1px solid transparent;
+    background-color: #b6b6b6;
+    color: white;
+}
+.btn.modify:hover {
+    background-color: #949494;
+}
+/* Paging ul li */
+ul.pagination {
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+ul.pagination .active .page-link {
+    background-color: #FF5B2D;
+    color: white;
+    border-color: #FF5B2D;
+}
+ul.pagination .page-link {
+    color: black;
+}
+/* info */
+#info .myInfo-base {
+    width: 97%;
+    background-color: #fff7f3;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+#info .social-sign-in > a {
+    margin-right: 5px;
+}
+#info .myAccount {
+    margin-top: 10px;
+}
+#info .myAccount > tr > td {
+    width: 120px;
+    height: 50px;
+}
+#info .myAccount > tr > td:nth-of-type(2) {width: 350px;}
+#info .myAccount > tr:nth-child(3) > td:nth-of-type(3) > button {
+    margin-right: 5px;
+}
+.withdraw-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.withdraw-body-base {
+    width: 90%;
+    height: auto;
+    background-color: #f1f1f1;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+/* coupon */
+#coupon .pointBanner {
+    width: 800px;
+    height: auto;
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#coupon .pointBanner > p:nth-of-type(1) > span {font-size: 16px}
+#coupon .pointBanner > p:nth-of-type(1) > h3 {font-size: 28px; font-weight: bolder}
+#coupon .pointBanner > p:nth-of-type(2) > .coup-expires { font-weight: bold }
+
+#coupon div > .sort {
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#coupon div > .sort > button {
+    width: 60px;
+    height: 60px;
+    background-color: #ff8282;
+    border: none;
+    margin-right: 10px;
+    border-radius: 90px;
+    font-size: 12px;
+    text-align: center;
+}
+#coupon div > .sort > button:hover { background-color: #e03535;}
+#coupon div > .point-list > table th {
+    background-color: #f1f1f1;
+}
+#coupon div > .point-list > table td {
+    width: auto;
+    height: 50px;
+    line-height: 50px;
+}
+#coupon div > .point-list > table .coup {font-weight: bolder}
+#coupon div > .point-list > table .coup.available {color: #3c8aff;}
+#coupon div > .point-list > table .coup.use {color: #8DC93A;}
+#coupon div > .point-list > table .coup.expiration {color: #FF5B2D;}
+/* order */
+#order .card {
+    display: flex;
+    flex-direction: row; /* 수평 배치 */
+    width: 800px;
+    height: auto;
+    margin-bottom: 10px;
+}
+#order .card > .my-order-img {
+    width: 200px;
+    height: 204px;
+}
+
+#order .card > .card-body { position: relative }
+#order .card > .card-body > .card-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+#order .card > .card-body > .card-text > span {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+#order .card > .card-body > .card-text > .delivery-complete {color: #3c8aff}
+#order .card > .card-body > .card-text > .delivery-ing {color: #FF5B2D}
+
+#order .card > .card-body > .card-text > .order-details {
+    padding-top: 10px;
+    color: #9d9d9d;
+
+}
+#order .card > .card-body > button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* pick */
+#pick .card {
+    display: flex;
+    flex-direction: row; /* 수평 배치 */
+    width: 700px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+#pick .card > .card-img-top {
+    width: 150px;
+    height: 150px;
+}
+#pick .card > .card-body { position: relative;}
+#pick .card > .card-body > .card-title {font-weight: bolder}
+#pick .card > .card-body > .card-text > .detail-manu {
+    color: #9d9d9d;
+}
+#pick .card > .card-body > .card-text > .price {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 15px;
+}
+
+/* Qna - list */
+#QnaList .find-myQna {
+    width: 100%;
+    height: 60px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+#QnaList .find-myQna > select {
+    width: 150px;
+    height: 35px;
+    padding: 5px 30px 5px 10px;
+    border-radius: 4px;
+    outline: 0 none;
+}
+#QnaList .myQna-list > table { border-top: 1px solid black }
+#QnaList .myQna-list > table td {
+    width: auto;
+    height: 60px;
+    line-height: 60px;
+}
+#QnaList .answer-complete {
+    color: red;
+    font-weight: bold;
+}
+/* Qna - view */
+#QnaView .view {
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+#QnaView .view table tr > td {
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+}
+#QnaView .view table tr > td:nth-of-type(1){width: 140px}
+#QnaView .view table tr > .align-center {
+    vertical-align: middle;
+}
+#QnaView .view table tr > td > span {
+    display: block;
+    width: 100%;
+    height: 200px;
+    border: none;
+    resize: none;
+    outline: none;
+    caret-color: transparent;
+}
+#QnaView .btn-qna {
+    float: right;
+}
+#QnaView .btn-qna > button {
+    margin-right: 5px;
+}
+/* footer */
+footer {
+    flex-shrink: 0;
+}

@@ -1,0 +1,84 @@
+<th:block th:insert="~{/my/layout/header.html}"/>
+<script>
+    $(document).ready(function() {
+        // "status" 클래스를 가진 모든 셀을 찾아서 처리
+        $('.status2').each(function() {
+            // 현재 셀의 텍스트 가져오기
+            var text = $(this).text();
+
+            // 텍스트에 따라 스타일 변경
+            if (text === '사용가능') {
+                $(this).css('color','black').addClass("possible");
+            } else if (text === '사용불가') {
+                $(this).css('color','red').addClass("impossible");
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        let count =document.querySelectorAll('.possible').length;
+        console.log(count);
+        $('.cntcoupon').text(count);
+
+    })
+
+
+</script>
+
+
+            <div class="coupon">
+                <th:block th:insert="~{/my/layout/aside.html}"/>
+                    <article>
+                        <h3>쿠폰</h3>
+                        <p>고객님께서 보유하고 있는 할인쿠폰을 확인하세요! 상품구매 시 더욱 저렴하게 구매할 수 있습니다.</p>
+                        
+                        <div class="bg">
+                            <dl>
+                                <dt>· 나의 보유쿠폰</dt> <!-- 카운트쿼리 쓸예정~ -->
+                                <dd>
+                                    <strong class="cntcoupon">2</strong>
+                                    <span>장</span>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <table border="0">
+                            <tr>
+                                <th>쿠폰명</th>
+                                <th>할인금액</th>
+                                <th>적용기준/제한조건</th>               
+                                <th>유효기간</th>
+                                <th>상태</th>
+                            </tr>
+                            <th:block th:each="coupon:${entityList1}">
+                            <tr>
+                                <td class="tit" th:text="${coupon.CName}">1만원 할인 중복쿠폰</td>
+                                <td class="discount" th:text="${coupon.getPrice(coupon.CPrice)+'원'}"><span>10,000</span>원</td>
+                                <td class="condition" >[[${coupon.getClimit(coupon.climit)+'원 이상 구매시'}]]</td>
+                                <td class="expire" th:text="'~'+${coupon.enddate.toLocalDate()}">~12/29</td>
+                                <td class="status" >
+                                <th:block th:if="${coupon.enddate.isAfter(realdate)}">
+                                    <span class="status2">사용가능</span>
+                                </th:block>
+                                <th:block th:if="${coupon.enddate.isBefore(realdate)}">
+                                    <span class="status2">사용불가</span>
+                                </th:block>
+                                </td>
+                            </tr>
+                            </th:block>
+                        </table>
+                        
+                        <ul class="info">
+                            <li>순금/골드바/돌반지/상품권 등 환금성 카테고리 및 중고상품 및 일부 프로모션 상품에는 쿠폰사용이 제한됩니다.</li>
+                            <li>쿠폰 적용 가능한 금액기준은 판매자 상품별할인과 G마켓 추가할인이 모두 포함된 할인적용가입니다.</li>
+                            <li>중복쿠폰은 판매자 할인, G마켓 할인과 중복 적용 가능하며 하나의 상품당 한장의 중복쿠폰만 사용 가능합니다.</li>
+                            <li>항공 할인은 항공권 전용 할인으로 결제시점에 할인 혜택을 받을 수 있습니다.</li>
+                            <li>항공권 예약취소 또는 환불시 적용했던 항공할인은 id당 1회 한하여 다시 발급됩니다.</li>
+                        </ul>                        
+                    </article>                  
+
+                </section>
+
+            </div>
+        </div>
+<th:block th:insert="~{/my/layout/footer.html}"/>

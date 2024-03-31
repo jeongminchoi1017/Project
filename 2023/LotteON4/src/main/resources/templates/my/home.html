@@ -1,0 +1,186 @@
+<th:block th:insert="~{/my/layout/header.html}"/>
+<script>
+    $(document).ready(function() {
+        // "status" 클래스를 가진 모든 셀을 찾아서 처리
+        $('.answered').each(function() {
+            // 현재 셀의 텍스트 가져오기
+            var text = $(this).text();
+
+            // 텍스트에 따라 스타일 변경
+            if (text === '검토중') {
+                $(this).css('color','black');
+            } else if (text === '답변완료') {
+                $(this).css('color','green');
+            }
+        });
+    });
+</script>
+<script th:src="@{/js/my/home.js}"></script>
+
+            <div class="home">
+                <th:block th:insert="~{/my/layout/aside.html}"/>
+                    <article class="latest">
+                        <h3>최근주문내역</h3>
+                        <a href="#" class="more">더보기</a>
+                        <table border="0">
+                            <tr>
+                                <th>날짜</th>
+                                <th>상품정보</th>
+                                <th>상태</th>
+                                <th>확인/신청</th>
+                            </tr>
+                            <th:block th:each="myitem,loop :${myItems}">
+                            <tr>
+                                <td class="date" th:text="${myitem.ordDate.toLocalDate()}">2022-12-13</td>
+                                <td class="info">
+                                    <a href="#" class="thumb"><img th:src="@{/thumbs/}+${myitem.prodCate1}+'/'+${myitem.prodCate2}+'/'+${myitem.thumb1}" alt="상품이미지"></a>
+                                    <ul>
+                                        <li class="company"><a href="#" th:text="${myitem.company}" th:value="${myitem.company}" th:onclick="seller([[${myitem.seller}]],[[${myitem.ordUid}]])">
+                                            상호명</a></li>
+                                        <li class="prodName"><a href="#" th:text="${myitem.prodName}" >상품명</a></li>
+                                        <li class="orderNo">수량 : <span class="prodCount" th:text="${myitem.count}">1</span>개 / 주문번호 : <a href="#" th:text="${myitem.ordNo}" th:onclick="product([[${myitem.itemNo}]])">1012211341</a></li>
+                                        <li class="prodPrice" th:text="${myitem.price}">34,000</li>
+                                    </ul>
+                                </td>
+
+                                    <td class="status" th:text="${myitem.ordStatus == '1'} ? '배송중' : '배송완료'"></td>
+                                <td class="confirm">
+                                    <a href="#" class="receive" th:onclick="'javascript:receivePop(' + ${myitem.ordNo} + '); return false;'">수취확인</a>
+                                    <a href="#" class="review" th:onclick="'javascript:reviewPop(' + ${myitem.prodNo} + ', ' + ${myitem.ordNo} + ','+${myitem.price}+'); return false;'">상품평</a>
+                                    <a href="#" class="refund">반품신청</a>
+                                    <a href="#" class="exchange">교환신청</a>
+                                </td>
+                            </tr>
+                            </th:block>
+                        </table>
+                    </article>
+
+                    <article class="point">
+                        <h3>포인트적립내역</h3>
+                        <a href="#" class="more">더보기</a>
+                        <table border="0">
+                            <tr>
+                                <th>날짜</th>
+                                <th>구분</th>
+                                <th>주문번호</th>
+                                <th>적립금액</th>                                
+                                <th>비고</th>
+                                <th>유효기간</th>
+                            </tr>
+                            <tr>
+                                <td>2022-12-10</td>
+                                <td>적립</td>
+                                <td>2022121001</td>
+                                <td>340</td>
+                                <td>상품 구매확정</td>
+                                <td>2024-12-10</td>
+                            </tr>
+                        </table>
+                    </article>
+                    <article class="review">
+                        <h3>상품평</h3>
+                        <a href="#" class="more">더보기</a>
+                        <table border="0">
+                            <tr>
+                                <th>번호</th>
+                                <th>상품명</th>
+                                <th>내용</th>
+                                <th>평점</th>
+                                <th>작성일</th>
+                            </tr>
+                            <th:block th:each="review , loop:${reviewLimit5}">
+                            <tr>
+                                <td th:text="${loop.index+1}" >1</td>
+                                <td th:text="${review.prodName}">상품명</td>
+                                <td th:text="${review.content}">배송이 빠릅니다. 잘 사용하겠습니다.</td>
+                                <td class="score">
+                                    <span class="rating" th:if="${review.rating == 1}" th:classappend="star1">평점</span>
+                                    <span class="rating" th:if="${review.rating == 2}" th:classappend="star2">평점</span>
+                                    <span class="rating" th:if="${review.rating == 3}" th:classappend="star3">평점</span>
+                                    <span class="rating" th:if="${review.rating == 4}" th:classappend="star4">평점</span>
+                                    <span class="rating" th:if="${review.rating == 5}" th:classappend="star5">평점</span>
+                                </td>
+                                <td th:text="${review.rdate.toLocalDate()}">2022-12-10</td>
+                            </tr>
+                            </th:block>
+                        </table>
+                    </article>
+
+                    <article class="qna">
+                        <h3>문의내역</h3>
+                        <a href="#" class="more">더보기</a>
+                        <table border="0">
+                            <tr>
+                                <th>번호</th>
+                                <th>문의채널</th>
+                                <th>문의유형</th>                                
+                                <th>제목</th>
+                                <th>작성일</th>
+                                <th>상태</th>
+                            </tr>
+                            <th:block th:each="qna,loop:${qnaLimit5}">
+                            <tr>
+                                <td th:text="${loop.index+1}">5</td>
+                                <th:block th:if="${qna.cate1 == qna}">
+                                    <td class="channel" >고객센터</td>
+                                </th:block>
+                                <th:block th:if="${qna.cate1 != qna}">
+                                    <td class="channel" >판매자게시판</td>
+                                </th:block>
+                                <td th:text="${qna.detail}">주문/결제</td>
+                                <td th:text="${qna.title}">신용카드 결제 중 오류가 난 경우 어떻게 하나요?</td>
+                                <td th:text="${qna.rdate.toLocalDate()}">2024-12-12</td>
+                                <td class="status">
+                                    <th:block th:if="${qna.comment ==1}">
+                                        <span class="answered">답변완료</span>
+                                    </th:block>
+                                    <th:block th:if="${qna.comment ==0}">
+                                        <span class="answered">검토중</span>
+                                    </th:block>
+                                </td>
+                            </tr>
+                            </th:block>
+                        </table>
+                    </article>
+
+                    <article class="myinfo">
+                        <h3>확인해주세요!</h3>
+
+                        <div>
+                            <div class="address">
+                                <span>기본 배송지설정</span>
+                                <a href="#" class="setting">변경</a>
+                                <p>
+                                    <span th:text="${'우편번호 : '+member.zip}">abc123@gmail.com</span><br/>
+                                    <span th:text="${'상세주소 :'+member.addr1 +' '+member.addr2}">abc123@gmail.com</span><br/>
+                                    (최종수정일 <span th:text="${member.rdate.toLocalDate()}">2021-12-10</span>)
+                                </p>
+
+                            </div>
+                            <div class="email">
+                                <span>email 설정</span>
+                                <a href="#" class="setting">변경</a>
+                                <p>
+                                    <span th:text="${member.email}">abc123@gmail.com</span><br/>
+                                    (최종수정일 <span th:text="${member.rdate.toLocalDate()}">2021-12-10</span>)
+                                </p>
+                            </div>
+                            <div class="hp">
+                                <span>휴대폰 설정</span>
+                                <a href="#" class="setting">변경</a>
+                                <p>
+                                    <span th:text="${member.hp}">abc123@gmail.com</span><br/>
+                                    (최종수정일 <span th:text="${member.rdate.toLocalDate()}">2021-12-10</span>)
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </article>
+
+                </section>
+
+            </div>
+        </div>        
+
+<th:block th:insert="~{/my/layout/footer.html}"/>

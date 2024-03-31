@@ -1,0 +1,46 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.thymeleaf.org"
+      layout:decorate="/index.html">
+
+<div class="sboard-list" layout:fragment="content">
+    <script>
+        function updateEnd(){
+            const updateConfirm = confirm('기간은 1년씩 연장됩니다.');
+            if(updateConfirm) {
+                $.ajax({
+                    url:'/subscribe/updateEnd',
+                    type: 'PUT',
+                    success: function(data){
+                        console.log('성공:', data);
+                        alert('기간이 1년 연장되었습니다.')
+                        window.location.href = '/subscribe/list';
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('에러:', error);
+                        alert('서버 요청 중 오류가 발생했습니다.');
+                    }
+                });
+            }else{
+                alert('기간연장 취소');
+            }
+        }
+    </script>
+    <div>
+        <h2>[[${subscribe.name}]] 구독중</h2>
+    </div>
+    <div th:with="currentDate=${#dates.createNow()}, endDate=${subscribe.endDate}">
+        <h3>스토리지 사용량</h3>
+        <div class="progress progress-striped active" style="width: 60%;">
+            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                100%
+            </div>
+        </div>
+
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-danger me-md-2" type="button" onclick="updateEnd()">기간 연장</button>
+    </div>
+
+</div>
+
+</html>

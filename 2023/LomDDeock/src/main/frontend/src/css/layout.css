@@ -1,0 +1,118 @@
+/* 폰트설정 */
+@font-face {
+    font-family: 'ONE-Mobile-POP';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* a 태그 밑줄과 색 초기화 */
+.reset-a {
+    text-decoration: none;
+    color : black;
+}
+
+/* width % 옵션 */
+.w50p {
+    width : 50% !important;
+}
+
+.w45p {
+    width : 45% !important;
+}
+
+.w40p {
+    width : 40% !important;
+}
+
+.w35p {
+    width : 35% !important;
+}
+
+.w30p {
+    width : 30% !important;
+}
+
+.w25p {
+    width: 25% !important;
+}
+
+.w20p {
+    width: 20% !important;
+}
+
+.w15p {
+    width: 15% !important;
+}
+
+.w10p {
+    width: 10% !important;
+}
+
+.w5p {
+    width: 5% !important;
+}
+
+/*padding-top*/
+.pt50px {
+   padding-top: 50px;
+}
+
+/* 오른쪽 위치로 고정 */
+.margin-left-auto {
+    margin-left : auto !important;
+}
+
+/* flex 자식요소들 가운데 정렬 */
+.flex-content-center {
+    justify-content: center;
+}
+
+/* admin header */
+#header {
+    background-color: white;
+    position: relative;
+    min-width: 1400px;
+    width: 100%;
+    height: 190px;
+    border-bottom: 4px solid white;
+}
+#mainHeader {
+    position: relative;
+    min-width: 1400px;
+    width: 100%;
+    height: 200px;
+    border-bottom: 4px solid #FF5B2D;
+}
+.adminHeader {
+    position: relative;
+    min-width: 1400px;
+    width: 100%;
+    height: 95px;
+    border-bottom: 4px solid #FF5B2D;
+}
+.adminHeader img {
+    width: 193px;
+    margin-left: 20px;
+    margin-top: 17px;
+}
+.adminFontLogo {
+    display: inline-block;
+    font-family: ONE-Mobile-POP;
+    color: #FF5B2D;
+    font-size: 30px;
+    margin-top: 24px;
+}
+.adminLogout {
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    top: 60px;
+    font-family: SUITE-Regular;
+}

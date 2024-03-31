@@ -1,0 +1,205 @@
+.menuOrder {
+    width: 1000px;
+    height: auto;
+    min-height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.red {
+    color: red;
+}
+
+.cartInfoTable {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.cartText {
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+    text-align: left;
+}
+
+.cartHeader > .check {
+    width: 5%;
+}
+
+.cartHeader > .name {
+    width: 35%;
+}
+
+.cartHeader > .price {
+    width: 12%;
+}
+
+.cartHeader > .count {
+    width: 12%;
+}
+
+.cartHeader > .delivery {
+    width: 12%;
+}
+
+.cartInfoTable .total {
+    color: red;
+}
+
+.cartItemInfo {
+    text-align: left;
+}
+
+.cartThumb {
+    width: 100px;
+    height: 100px;
+}
+
+.cartItemInfo > p {
+    vertical-align: middle;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.cartItemInfo > p > span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.orderInfoForm {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.deliveryInfoArea {
+    width: 60%;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.orderDelete {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.deliveryInfoArea > .deliveryInfoTable {
+
+}
+
+.deliveryInfoArea > .deliveryInfoTable tr {
+    vertical-align: middle;
+}
+
+.deliveryInfoArea > .deliveryInfoTable tr > td {
+    border: none;
+    background-color: unset;
+}
+
+.deliveryInfoArea > .deliveryInfoTable tr > td:nth-child(1){
+    text-align: left;
+    width: 20%;
+}
+
+.deliveryInfoArea > .deliveryInfoTable tr > td:nth-child(2){
+    width: 55%;
+}
+
+.deliveryInfoArea > .deliveryInfoTable tr > td:nth-child(3){
+    width: 25%;
+}
+
+.borderLine {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #e9e9e9;
+    box-sizing: border-box;
+}
+
+.discountInfoArea {
+
+}
+
+.discountInfoArea tr > td {
+    border: none;
+    background-color: unset;
+    vertical-align: middle;
+}
+
+.discountInfoArea tr > td:nth-child(1) {
+    text-align: left;
+    width: 40%;
+}
+
+.discountInfoArea tr > td:nth-child(2) {
+    width: 0%;
+}
+
+.discountInfoArea tr > td:nth-child(3) {
+    width: 60%;
+}
+
+.paymentInfoArea {
+    text-align: left;
+}
+
+.paymentSelection {
+    width: 50%;
+    margin: 10px 0;
+}
+
+.menuOrderArea {
+    width: 35%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+.menuOrderText {
+    font-weight: bold;
+}
+
+.menuOrderForm {
+    width: 100%;
+    height: auto;
+    background-color: #f44;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.menuOrderButton {
+    padding: 20px 90px;
+}
+
+.menuOrderTable {
+
+}
+
+.menuOrderTable td {
+    width: 50%;
+    border: none;
+    background-color: unset;
+}
+
+.menuOrderTable tr td:nth-child(1) {
+    text-align: left;
+}
+
+.menuOrderTable tr td:nth-child(2) {
+    text-align: right;
+}
+
+.gray-font > td {
+    color: #e9e9e9;
+}

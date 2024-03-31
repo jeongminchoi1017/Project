@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lomDDeock.mapper.member.WishListMapper">
+    <select id="getMyWishListTotal" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        FROM `wishList`
+        WHERE `email` = #{email}
+    </select>
+    <select id="getMyWishList" resultType="lomDDeock.dto.member.WishListDTO">
+        SELECT a.`wishSeq` AS wishSeq,
+        a.`email` AS email,
+        a.`menuNo` AS menuNo,
+        b.`menuName` AS menuName,
+        b.`thumb` AS thumb,
+        b.`descript` AS descript,
+        b.`price` AS price
+        FROM `wishList` AS a
+        LEFT OUTER JOIN `menu` AS b ON a.`menuNo` = b.`menuNo`
+        WHERE a.`email` = #{email}
+        AND b.`deleteYN` = 'Y'
+        AND b.`lastRevision` = 'Y'
+        LIMIT #{pg}, 10
+    </select>
+</mapper>

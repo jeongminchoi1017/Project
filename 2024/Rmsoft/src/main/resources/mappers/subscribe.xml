@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rmsoft.mapper.SubscribeMapper">
+  <insert id="insertSubscribe">
+  	INSERT INTO Subscribe SET
+    subscriber=#{subscriber},
+    type=#{type},
+    company=#{company},
+    hp=#{hp},
+    email=#{email},
+    zip=#{zip},
+    addr1=#{addr1},
+    addr2=#{addr2},
+    regDate=NOW(),
+    endDate = DATE_ADD(NOW(), INTERVAL 1 YEAR),
+    yn=1
+  </insert>
+  <select id="selectSubscribe" resultType="com.rmsoft.dto.ListDTO">
+  	SELECT a.*, b.* FROM Subscribe AS a JOIN Type AS b ON a.type=b.typeNo WHERE subscriber=#{uid} AND yn=1
+  </select>
+  <update id="updateSubscribe">
+  	UPDATE Subscribe SET yn=0 WHERE subscriber=#{uid} AND endDate &lt; NOW();
+  </update>
+  <update id="updateEnd">
+  	UPDATE Subscribe SET endDate= DATE_ADD(endDate, INTERVAL 1 YEAR) WHERE subscriber=#{uid};
+  </update>
+
+</mapper>

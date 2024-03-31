@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rmsoft.mapper.TypeMapper">
+  <insert id="insertSubscribe">
+  	INSERT INTO Subscribe SET subscriber=#{subscriber},type=#{type},company=#{company},hp=#{hp},email=#{email},zip=#{zip},addr1=#{addr1},addr2=#{addr2},regip=#{regip},regDate=NOW(),endDate=DATEADD(YEAR, 1, NOW())
+  </insert>
+  <select id="selectTypes" resultType="com.rmsoft.dto.TypeDTO">
+  	SELECT * FROM Type
+  </select>
+  <select id="selectUser" resultType="com.rmsoft.dto.UserDTO">
+  	SELECT * FROM User WHERE uid=#{uid}
+  </select>
+  <update id="updateUser">
+  	UPDATE User SET name=#{name}, hp=#{hp} WHERE uid=#{uid}
+  </update>
+  <delete id="deleteUser">
+  	DELETE FROM User WHERE uid=#{uid}
+  </delete>
+    <select id="countUid" resultType="int">
+        SELECT COUNT(*) FROM User WHERE uid=#{uid}
+    </select>
+    <select id="countNick" resultType="int">
+        SELECT COUNT(*) FROM User WHERE nick=#{nick}
+    </select>
+    <select id="countEmail" resultType="int">
+        SELECT COUNT(*) FROM User WHERE email=#{email}
+    </select>
+    <select id="countHp" resultType="int">
+        SELECT COUNT(*) FROM User WHERE hp=#{hp}
+    </select>
+</mapper>

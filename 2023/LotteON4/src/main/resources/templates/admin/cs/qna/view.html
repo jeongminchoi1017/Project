@@ -1,0 +1,58 @@
+<th:block th:insert="~{/admin/_header.html}"/>
+<th:block th:insert="~{/admin/_aside.html}"/>
+        <section id="admin-cs-notice-view">
+            <nav>
+                <h3>문의하기 답변</h3>
+                <p>
+                    HOME &gt; 고객센터 &gt; <strong>문의하기</strong>
+                </p>
+            </nav>
+            <nav></nav>
+            <article>
+                <div class="content">
+                    <form th:action="@{/admin/cs/qna/reply}" method="post">
+                        <input type="hidden" name="parent" th:value="${view.no}">
+                        <input type="hidden" name="cate1" th:value="${view.cate1}">
+                        <input type="hidden" name="writer" th:value="${#authentication.principal.member.uid}">
+                        <table>
+                            <tr>
+                                <td>유형</td>
+                                <td>
+                                    <th:block th:each="c2 : ${cate2}">
+                                        <th:block th:each="c3 : ${cate3}">
+                                            <span th:if="${c2.cate2==view.cate2 and c3.cate3==view.type}" th:text="${c2.detail + ' · ' + c3.detail}"></span>
+                                        </th:block>
+                                    </th:block>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>제목</td>
+                                <td>[[${view.title}]]</td>
+                            </tr>
+                            <tr>
+                                <td>내용</td>
+                                <td>
+                                    <pre>[[${view.content}]]</pre>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>답변</td>
+                                <td>
+                                    <div th:if="${view.comment == 0}">
+                                        <textarea name="content"></textarea>
+                                    </div>
+                                    <div th:if="${view.comment == 1}" th:text="${reply.content}"></div>
+                                </td>
+                            </tr>
+                      </table>
+                        <a th:href="@{/admin/cs/qna/list}" class="btnList">목록</a>
+                         <input type="submit" value="답변등록" class="btnReply">
+                        <a th:href="@{/admin/cs/qna/delete(chk=${view.no})}" class="btnDelete">삭제</a>
+                    </form>
+                </div>
+            </article>
+        </section>
+    </div>
+</section>
+    </main>
+<th:block th:insert="~{/admin/_footer.html}"/>

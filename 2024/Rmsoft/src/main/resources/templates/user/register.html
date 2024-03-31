@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(function(){
+            let uidOk = false;
+            let passOk = false;
+            let nickOk = false;
+            let emailOk = false;
+            let hpOk = false;
+
+            // 회원가입
+            $('#btnRegister').click(function(e){
+                e.preventDefault();
+                if(uidOk==false) {
+                    alert('아이디 확인');
+                }else if(passOk==false) {
+                    alert('비밀번호 확인');
+                }else if(nickOk==false) {
+                    alert('별명 확인');
+                }else if(emailOk==false) {
+                    alert('이메일 확인');
+                }else if(hpOk==false) {
+                    alert('휴대폰 번호 확인')
+                }else {
+                    $('#form').submit();
+                }
+
+            });
+
+            // 아이디 중복체크
+            $('input[name=uid]').focusout(function(){
+
+                const uid = $(this).val();
+
+                $.ajax({
+                    url: '/user/check/uid/'+uid,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(data){
+                        const labelUid = $('.label-uid');
+                        if(data > 0){
+                            labelUid.parent().addClass('has-error');
+                            labelUid.text('이미 사용 중인 아이디 입니다.');
+                        }else{
+                            labelUid.parent().addClass('has-success');
+                            labelUid.text('사용 가능한 아이디 입니다.');
+                            uidOk = true;
+                        }
+                    }
+
+                });
+
+            });
+
+            // 별명 중복체크
+            $('input[name=nick]').focusout(function(){
+
+                const nick = $(this).val();
+
+                $.ajax({
+                    url: '/user/check/nick/'+nick,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(data){
+                        const labelNick = $('.label-nick');
+                        if(data > 0){
+                            labelNick.parent().addClass('has-error');
+                            labelNick.text('이미 사용 중인 별명 입니다.');
+                        }else{
+                            labelNick.parent().addClass('has-success');
+                            labelNick.text('사용 가능한 별명 입니다.');
+                            nickOk = true;
+                        }
+                    }
+
+                });
+
+            });
+            // 이메일 중복체크
+            $('input[name=email]').focusout(function(){
+
+                const email = $(this).val();
+
+                $.ajax({
+                    url: '/user/check/email/'+email,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(data){
+                        const labelEmail = $('.label-email');
+                        if(data > 0){
+                            labelEmail.parent().addClass('has-error');
+                            labelEmail.text('이미 사용 중인 이메일 입니다.');
+                        }else{
+                            labelEmail.parent().addClass('has-success');
+                            labelEmail.text('사용 가능한 이메일 입니다.');
+                            emailOk = true;
+                        }
+                    }
+
+                });
+
+            });
+            // 휴대폰 중복체크
+            $('input[name=hp]').focusout(function(){
+
+                const hp = $(this).val();
+
+                $.ajax({
+                    url: '/user/check/hp/'+hp,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(data){
+                        const labelHp = $('.label-hp');
+                        if(data > 0){
+                            labelHp.parent().addClass('has-error');
+                            labelHp.text('이미 사용 중인 휴대폰 번호 입니다.');
+                        }else{
+                            labelHp.parent().addClass('has-success');
+                            labelHp.text('사용 가능한 휴대폰 번호 입니다.');
+                            hpOk=true;
+                        }
+                    }
+
+                });
+
+            });
+            // 비밀번호 체크
+            $('input[name=pass2]').focusout(function(){
+
+                const pass = $('input[name=pass]').val();
+                const pass2 = $(this).val();
+                const labelpass = $('.label-pass');
+
+                if(pass !== pass2){
+                    labelpass.parent().addClass('has-error');
+                    labelpass.text('비밀번호가 다릅니다.');
+                }else{
+                    labelpass.parent().addClass('has-success');
+                    labelpass.text('비밀번호 확인 완료');
+                    passOk=true;
+                }
+
+            });
+        });
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="page-header panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">회원가입</h3>
+                </div>
+                <div class="panel-body">
+                    <form id="form" th:action="@{/user/register}" method="post">
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="label-uid control-label">아이디</label>
+                                <input class="form-control" name="uid" required>
+                            </div>
+                            <div class="form-group">
+                                <label>비밀번호</label>
+                                <input class="form-control" name="pass" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="label-pass control-label">비밀번호 확인</label>
+                                <input class="form-control" name="pass2" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>이름</label>
+                                <input class="form-control" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="label-nick control-label">별명</label>
+                                <input class="form-control" name="nick" required>
+                                <p class="help-block">별명을 입력하세요.</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="label-email control-label">이메일</label>
+                                <input class="form-control" name="email" required>
+                                <p class="help-block">이메일을 입력하세요.</p>
+                            </div>
+                            <div class="form-group">
+                                <label class="label-hp control-label">휴대폰</label>
+                                <input class="form-control" name="hp" required>
+                                <p class="help-block">휴대폰번호는 - 포함 13글자입니다.</p>
+                            </div>
+                            <div class="form-group">
+                                <label>우편번호</label>
+                                <input class="form-control" name="zip" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>기본주소</label>
+                                <input class="form-control" name="addr1" required>
+                            </div>
+                            <div class="form-group">
+                                <label>상세주소</label>
+                                <input class="form-control" name="addr2" required>
+                            </div>
+                            <!-- Change this to a button or input when using this as a form -->
+                            <div class="text-center">
+                                <a th:href="@{/user/login}" class="btn btn-default">취소</a>
+                                <a th:href="@{#}" id="btnRegister" class="btn btn-primary">등록</a>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="../vendor/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="../vendor/metisMenu/metisMenu.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="../dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>

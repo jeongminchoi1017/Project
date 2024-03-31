@@ -1,0 +1,119 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.thymeleaf.org"
+      layout:decorate="/index.html">
+
+<div class="sboard-register" layout:fragment="content">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+
+            // 서비스 구독
+            $('#btnSubscribe').click(function (e) {
+                e.preventDefault();
+                const activeType = document.querySelector('.list-group').querySelector('.active');
+                console.log(activeType);
+                if (!activeType) {
+                    alert('서비스 타입을 선택해주세요.');
+                    return;
+                }
+                const jsonData ={
+                    "subscriber":$('input[name=subscriber]').val(),
+                    "type": activeType.querySelector('input[name=type]').value,
+                    "company":$('input[name=company]').val(),
+                    "hp":$('input[name=hp]').val(),
+                    "email":$('input[name=email]').val(),
+                    "zip":$('input[name=zip]').val(),
+                    "addr1":$('input[name=addr1]').val(),
+                    "addr2":$('input[name=addr2]').val()
+                }
+                console.log("type : "+jsonData.type.toString());
+
+                $.ajax({
+                    url: '/subscribe/write',
+                    type: 'POST',
+                    data: JSON.stringify(jsonData), // JSON 데이터로 변환
+                    contentType: 'application/json',
+                    success: function (data) {
+                        console.log('성공:', data);
+                        alert('구독 완료');
+                        window.location.href = '/subscribe/list';
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        console.log('오류:', textStatus, errorThrown);
+                        console.log(jqXHR.responseText); // 자세한 내용을 확인하기 위해 서버 응답을 로그로 남깁니다.
+                        console.log('구독 실패');
+                    }
+                });
+
+            });
+        });
+
+    </script>
+    <script>
+        function changeActive(clickedElement, event) {
+            event.preventDefault();
+
+            // 동일한 부모 안의 모든 'a' 태그에서 'active' 클래스 제거
+            var allLinks = document.querySelectorAll('.typeList');
+            allLinks.forEach(function(link) {
+                link.classList.remove('active');
+            });
+
+            // 클릭한 'a' 태그에 'active' 클래스 추가
+            clickedElement.classList.add('active');
+        }
+
+    </script>
+    <div class="panel">
+        <!-- /.panel-heading -->
+        <div class="panel-body">
+                <form th:action="@{#}" style="width: 40%;">
+                    <input type="hidden" name="subscriber" th:value="${#authentication.principal.user.uid}"/>
+                    <span style="color:red;">필수정보</span>
+                    <div class="list-group">
+                        <th:block th:each="type:${types}">
+                            <a href="#" class="list-group-item list-group-item-action typeList" onclick="changeActive(this, event)">
+                                <input type="hidden" name="type" th:value="${type.typeNo}"/>
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">[[${type.name}]]</h5>
+                                    <small>[[${type.volume}]]TB</small>
+                                </div>
+                                <p class="mb-1">[[${type.memberNum}]]인 사용</p>
+                                <small>연 [[${type.fee}]]원</small>
+                            </a>
+                        </th:block>
+                    </div>
+                    <span style="color: blue;">부가정보</span>
+                    <div class="form-group">
+                        <label>회사명</label>
+                        <input class="form-control" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label class="label-hp control-label">전화번호</label>
+                        <input class="form-control" name="hp" th:value="${#authentication.principal.user.hp}">
+                    </div>
+                    <div class="form-group">
+                        <label class="label-email control-label">이메일</label>
+                        <input class="form-control" name="email" th:value="${#authentication.principal.user.email}">
+                    </div>
+                    <div class="form-group">
+                        <label>우편번호</label>
+                        <input class="form-control" name="zip" th:value="${#authentication.principal.user.zip}">
+                    </div>
+
+                    <div class="form-group">
+                        <label>기본주소</label>
+                        <input class="form-control" name="addr1" th:value="${#authentication.principal.user.addr1}">
+                    </div>
+                    <div class="form-group">
+                        <label>상세주소</label>
+                        <input class="form-control" name="addr2" th:value="${#authentication.principal.user.addr2}">
+                    </div>
+                    <div class="text-right">
+                        <input type="submit" id="btnSubscribe" class="btn btn-primary" value="등록"/>
+                    </div>
+                </form>
+        </div>
+    </div>
+</div>
+</html>

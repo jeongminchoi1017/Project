@@ -1,0 +1,403 @@
+<th:block th:insert = "~{/product/layout/header.html}" />
+<script th:src="@{/js/zipcode.js}"></script>
+<main id="product">
+    <th:block th:insert = "~{/product/layout/aside.html}" />
+    <!-- 주문 페이지 시작-->
+    <section class="order">
+        <!-- 제목, 페이지 네비게이션 -->
+        <nav>
+            <h1>주문결제</h1>
+            <p>
+                HOME > 장바구니 > <strong>주문결제</strong>
+            </p>
+        </nav>
+        <form th:action="@{/product/complete}" id="orderForm" method="post">
+            <!-- 주문 상품 목록 -->
+            <input type="hidden" name="ordCount" th:value="${totalQuantity}" />  <!-- 주문 총량 -->
+            <input type="hidden" name="ordPrice" th:value="${prodDTO.price}" />     <!-- 제품 한개 가격 -->
+            <input type="hidden" name="ordDelivery" th:value="${prodDTO.delivery}" />   <!-- 배송비 -->
+            <input type="hidden" name="prodNo" th:value="${prodDTO.prodNo}" />   <!-- 제품 번호 -->
+            <input type="hidden" name="ordDiscount" th:value="${prodDTO.discount}" /> <!-- discount 퍼센테이지 -->
+            <input type="hidden" name="savePoint" th:value="${prodDTO.point}" /> <!-- 여기서의 point는 savePoint임 -->
+            <input type="hidden" name="discountPrice" th:value="${#numbers.formatInteger(((prodDTO.price* totalQuantity)*(prodDTO.discount*0.01)), 3)}" /> <!-- discount되어 빠질 가격 -->
+            <input type="hidden" name="subTotalPrice"  th:value="${#numbers.formatInteger(((prodDTO.price * totalQuantity) + prodDTO.delivery) ,3)}" />     <!-- view의 소계 -->
+            <input type="hidden" name="usedPoint" />    <!-- 사용하는 포인트 -->
+            <input type="hidden" name="ordTotPrice"  />     <!-- 가격의 총합 -->
+            <input type="hidden" name="userName" id="userName"  />      <!-- 로그인 유저 이름 받는사람 이름 X -->
+            <input type="hidden" name="uid" id="userId"  />             <!-- 로그인 유저 아이디 -->
+            <input type="hidden" name="memberHp" id="userhp"  />             <!-- 로그인 유저 전화번호 -->
+            <input type="hidden" name="getPoint" id="getPoint"  />             <!-- 로그인 유저의 보유 포인트 -->
+            <input type="hidden" name="prodName" id="prodName"  />             <!-- 제품명 -->
+            <input type="hidden" name="descript" id="descript"  />             <!-- 제품명 -->
+            <input type="hidden" name="prodCate1" id="prodCate1" th:value="${prodDTO.prodCate1}" />             <!-- 제품명 -->
+            <input type="hidden" name="prodCate2" id="prodCate2" th:value="${prodDTO.prodCate2}" />             <!-- 제품명 -->
+            <input type="hidden" name="thumb3" id="thumb3"  th:value="${prodDTO.thumb3}" />             <!-- 제품명 -->
+            <input type="hidden" name="paymentMethod" id="paymentMethod"  />             <!-- 지불방법 -->
+            <!-- 받는 사람 이름, 주소1/2/zip, 전화번호는 아래에 inputTag에 있음 -->
+            <table>
+                <thead>
+                <tr>
+                    <th>상품명</th>
+                    <th>총수량</th>
+                    <th>판매가</th>
+                    <th>배송비</th>
+                    <th>소계</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="empty">
+                    <td colspan="7">장바구니에 상품이 없습니다.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <article>
+                            <a href="#"><img th:src = "@{/thumbs/__${prodDTO.prodCate1}__/__${prodDTO.prodCate2}__/__${prodDTO.thumb3}__}" alt=""></a>
+                            <div>
+                                <h2><a href="#">[[${prodDTO.prodName}]]</a></h2>
+                                <p>[[${prodDTO.descript}]]</p>
+                            </div>
+                        </article>
+                    </td>
+                    <td>[[${totalQuantity}]]</td>
+                    <td>[[${prodDTO.price}]]</td>
+                    <td>[[${prodDTO.delivery}]]</td>
+                    <td name="subTotal" id="subTotal">  [[${#numbers.formatInteger(((prodDTO.price * totalQuantity) + prodDTO.delivery) ,3)}]] 원 </td>
+
+                    <!--총 합계 할인 금액없이 스크립트 라인에서? totalQuantity 만큼 곱해서 .text로 출력 해야할 듯 일단 토탈 먼저 넘기고 -->
+                </tr>
+                </tbody>
+            </table>
+
+            <!-- 최종 결제 정보 -->
+            <div class="final">
+                <h2>최종결제 정보</h2>
+                <table border="0">
+                    <tr>
+                        <td>총</td>
+                        <td>[[${totalQuantity}]] 건</td>
+                    </tr>
+                    <tr>
+                        <td>상품금액</td>
+                        <td>[[${prodDTO.price}]]</td>
+                    </tr>
+                    <tr>
+                        <td>할인금액</td>
+                        <td>
+                            - [[${#numbers.formatInteger(((prodDTO.price * totalQuantity)*(prodDTO.discount*0.01)), 3, 'COMMA')}]]
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>배송비</td>
+                        <td>[[${prodDTO.delivery}]]</td>
+                    </tr>
+                    <tr id="disPoint">
+                        <td>포인트 할인</td>
+                        <!-- - 포인트 사용량을 잡아서 날려줘야함-->
+                    </tr>
+                    <tr id="oTotalPrice">
+                        <td>전체주문금액</td>
+
+                        <!--여기 위에 총 가격부분 point가 savePoint를 가져오기 때문에 사용하는 포인트를 js에서 잡아줘야함-->
+                    </tr>
+                </table>
+                <input type="submit" name="" value="결제하기">
+            </div>
+
+            <!-- 배송정보 -->
+            <article class="delivery">
+                <h1>배송정보</h1>
+                <table>
+                    <tr>
+                        <td>주문자</td>
+                        <td><input type="text" name="recipName" id="memberName"/></td>
+                    </tr>
+                    <tr>
+                        <td>휴대폰</td>
+                        <td>
+                            <input type="text" name="recipHp" id="memberHp"/>
+                            <span>- 포함 입력</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>우편번호</td>
+                        <td>
+                            <input type="text" name="recipZip" id="memberZip"/>
+                            <input type="button" value="검색" th:onclick="zipcode()" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>기본주소</td>
+                        <td>
+                            <input type="text" name="recipAddr1" id="memberAddr1"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>상세주소</td>
+                        <td>
+                            <input type="text" name="recipAddr2" id="memberAddr2"/>
+                        </td>
+                    </tr>
+                </table>
+            </article>
+
+            <!-- 할인정보 -->
+            <article class="discount">
+                <h1>할인정보</h1>
+
+                <div> <!-- 만약에 점수가 없으면 포인트가 부족 하다고 띄워야함  -->
+                    <p>현재 포인트 : <span >
+                                      [[${#authentication.principal.member.point}]]  
+                                        <input type="hidden" name="userPoint" id="userPoint" />
+                                    </span>점
+                    </p>
+                    <label>
+                        <input type="text" name="point" id="usePoint" />점
+                        <input type="button" value="적용" id="check" th:onclick="checkPoint()"/>
+                    </label>
+                    <span>포인트 5,000점 이상이면 현금처럼 사용 가능합니다.</span>
+                    <div id="pointError" ></div>
+                </div>
+            </article>
+            <!-- 결제방법 -->
+            <article class="payment">
+                <h1>결제방법</h1>
+                <div>
+                    <span>신용카드</span>
+                    <p>
+                        <label><input type="radio" name="payment" value="credit" />신용카드 결제</label>
+                        <label><input type="radio" name="payment" value="check" />체크카드 결제</label>
+                    </p>
+                </div>
+                <div>
+                    <span>계좌이체</span>
+                    <p>
+                        <label><input type="radio" name="payment" value="account" />실시간 계좌이체</label>
+                        <label><input type="radio" name="payment" value="bankBook" />무통장 입금</label>
+                    </p>
+                </div>
+                <div>
+                    <span>기타</span>
+                    <p>
+                        <label><input type="radio" name="payment" value="cellPhone" />휴대폰결제</label>
+                        <label>
+                            <input type="radio" name="payment" value="kakao" />카카오페이
+                            <img th:src="@{templates/product/images/ico_kakaopay.gif}" alt=""/>
+                        </label>
+                    </p>
+                </div>
+            </article>
+
+            <!-- 경고 -->
+            <article class="alert">
+                <ul>
+                    <li><span>롯데ON의 모든 판매자는 안전거래를 위해 구매금액, 결제수단에 상관없이 모든거래에 대하여 롯데ON 유한책임회사의 구매안전서비스(에스크로)를 제공하고 있습니다.</span></li>
+                    <li><span>롯데ON 유한책임회사의 전자금융거래법에 의해 결제대금예치업 등록번호는 02-006-00008 입니다.</span></li>
+                    <li><span>등록여부는 금융감독원 홈페이지(www.fss.or.kr)의 업무자료>인허가업무안내>전자금융업등록현황에서 확인하실수 있습니다.</span></li>
+                </ul>
+            </article>
+
+        </form>
+
+    </section>
+    <!-- 주문 페이지 끝-->
+    <script>
+        // member
+
+        var mName = document.getElementById("memberName");
+        var mHp = document.getElementById("memberHp");
+        var mAddr1 = document.getElementById("memberAddr1");
+        var mAddr2 = document.getElementById("memberAddr2");
+        var usePoint =  document.getElementById("usePoint");
+        var userPoint =  document.getElementById("userPoint");
+        var mZip =  document.getElementById("memberZip");
+        var subTotal =  document.getElementById("subTotal");
+        var mPoint =  document.getElementById("subTotal");
+        var disPoint =  document.getElementById("disPoint");
+        var oTotalPrice =  document.getElementById("oTotalPrice");
+        var userName =  document.getElementById("userName");
+        var userId =  document.getElementById("userId");
+        var getPoint =  document.getElementById("getPoint");
+        var prodName =  document.getElementById("prodName");
+        var descript =  document.getElementById("descript");
+        var userhp =  document.getElementById("userhp");
+
+        var totPrice = $('input[name = ordTotPrice]');
+        var uPoint = $('input[name = usedPoint]');
+
+        userId.value = "[[${#authentication.principal.member.uid}]]";
+        userName.value = "[[${#authentication.principal.member.name}]]";
+        usePoint.value = "0";
+        userPoint.value = "[[${#authentication.principal.member.point}]]";
+        mName.value  = "[[${#authentication.principal.member.name}]]";
+        mHp.value    = "[[${#authentication.principal.member.hp}]]";
+        userhp.value    = "[[${#authentication.principal.member.hp}]]";
+        mAddr1.value = "[[${#authentication.principal.member.addr1}]]";
+        mAddr2.value = "[[${#authentication.principal.member.addr2}]]";
+        mPoint.value = "[[${#authentication.principal.member.point}]]";
+        mZip.value   = "[[${#authentication.principal.member.zip}]]";
+        subTotal.value = "[[${#numbers.formatInteger(((prodDTO.price * totalQuantity) - prodDTO.delivery), 3, 'COMMA')}]]";
+        getPoint.value = "[[${#authentication.principal.member.point}]]";
+        prodName.value = "[[${prodDTO.prodName}]]"
+        descript.value = "[[${prodDTO.descript}]]"
+
+
+
+        var newPtag = document.createElement('td');
+        newPtag.id = 'FPoint';
+        newPtag.innerText = "0";
+        disPoint.append(newPtag);
+
+
+
+        var tPoint;
+
+        function checkPoint() {
+            var availablePoint = parseInt(document.getElementById("userPoint").value);/* Calculate available point from your data source */;
+            var usePoint = parseInt(document.getElementById("usePoint").value);
+            var sPoint = document.getElementById("pointError")
+            
+            if (isNaN(usePoint) || usePoint < 5000 || usePoint === "") {
+                // 사용 가능한 포인트가 5000 이상이거나 사용 포인트가 공백이 아니어야 합니다.
+                sPoint.innerText = "포인트가 부족합니다. 5,000 포인트 이상 입력해 주세요.";
+                sPoint.style.color = "red";
+                document.getElementById("usePoint").value = 0; // 사용 포인트를 초기화하거나 공백으로 설정합니다.
+                newPtag.innerText = 0;
+            } else {
+                // 5000 이상의 포인트를 사용할 경우
+                sPoint.innerText = "사용 가능한 포인트입니다.";
+                sPoint.style.color = "green";
+                document.getElementById("FPoint").innerText = usePoint;
+            }
+            
+        }
+        var fPointval = document.getElementById('FPoint')
+
+
+
+
+        var cre_tag;
+
+        function overflow(){
+
+            var FpointValue;
+            $(document).on('click', 'totalPrice',function(){
+
+                FpointValue = fPointval.value;
+                console.log("142412421"+parseInt(FpointValue));
+
+            });
+
+            let pPoint = document.getElementById('usePoint').value;
+
+            console.log("fPointvalfPointvalfPointval" + fPointval );
+            var sumPrice = parseInt([[${prodDTO.price}]]);
+            console.log(sumPrice);
+            var sumQuantity = parseInt([[${totalQuantity}]]);
+            console.log(sumQuantity);
+            var sumDiscount = parseInt([[${prodDTO.discount}]]);
+            console.log(sumDiscount);
+            var sumDelivery = parseInt([[${prodDTO.delivery}]]);
+            console.log(sumDelivery);
+            var sumPoint = parseInt(pPoint);
+            console.log("혹시이거냐?"+sumPoint)
+            var totalPrice = ((sumPrice * sumQuantity) - ((sumPrice * sumQuantity) * (sumDiscount * 0.01)) + sumDelivery - sumPoint);
+            console.log("skfskjfskf" + totalPrice )
+
+
+            cre_tag = document.createElement('td');
+            cre_tag.id = 'sumTotalPrice';
+            newPtag.innerText = usePoint.value;
+            cre_tag.innerText = "총 가격: " + totalPrice + " 원";
+            oTotalPrice.append(cre_tag);
+
+            totPrice.attr('value', parseInt(totalPrice));
+            uPoint.attr('value', "0");
+        }
+
+        function changeTotal(){
+            let pPoint = document.getElementById('usePoint').value;
+
+
+            console.log("fPointvalfPointvalfPointval" + fPointval );
+            var sumPrice = parseInt([[${prodDTO.price}]]);
+            console.log(sumPrice);
+            var sumQuantity = parseInt([[${totalQuantity}]]);
+            console.log(sumQuantity);
+            var sumDiscount = parseInt([[${prodDTO.discount}]]);
+            console.log(sumDiscount);
+            var sumDelivery = parseInt([[${prodDTO.delivery}]]);
+            console.log(sumDelivery);
+            var sumPoint = parseInt(pPoint);
+            console.log("혹시이거냐?"+sumPoint)
+            var totalPrice = ((sumPrice * sumQuantity) - ((sumPrice * sumQuantity) * (sumDiscount * 0.01)) + sumDelivery - sumPoint);
+            console.log("skfskjfskf" + totalPrice )
+
+            //if(cre_tag.value != null){}
+            cre_tag.innerText = "총 가격: " + totalPrice + " 원";
+
+            totPrice.attr('value', parseInt(totalPrice));
+            console.log("================================" +  parseInt(totalPrice))
+
+            uPoint.attr('value', newPtag.innerText);
+
+        }
+
+        /*  window.onload = function(){
+              overflow();
+          }*/
+
+
+        //document.getElementById('check').addEventListener('click', overflow);
+        document.getElementById('check').addEventListener('click', changeTotal);
+
+
+        setTimeout(overflow, 500);
+        // product
+
+        // payment
+
+        // "payment" 이름을 가진 모든 요소를 찾습니다.
+        var paymentElements = document.querySelectorAll('input[name="payment"]');
+        var purchaseButton = document.querySelector('input[type="submit"]')
+
+        purchaseButton.disabled = true;
+        
+        // 각 라디오 버튼에 변경 이벤트를 감지하는 이벤트 리스너를 추가합니다.
+        paymentElements.forEach(function (element) {
+            element.addEventListener('change', function () {
+                // 어떤 라디오 버튼이 선택되었는지 확인합니다.
+                if (element.checked) {
+                    // "paymentValue" 입력 필드의 값을 선택한 라디오 버튼의 값으로 설정합니다.
+                     var selectValue = element.value;
+                    
+                     if(selectValue === "kakao"){
+                         document.getElementById("paymentMethod").value = "카카오 페이";     
+                     }else if(selectValue === "credit"){
+                         document.getElementById("paymentMethod").value = "신용 카드";
+                     }else if(selectValue === "check"){
+                         document.getElementById("paymentMethod").value = "체크 카드";
+                     }else if(selectValue === "account"){
+                         document.getElementById("paymentMethod").value = "실시간 계좌 이체";
+                     }else if(selectValue === "cellPhone"){
+                         document.getElementById("paymentMethod").value = "휴대폰 결제";
+                     }else if(selectValue === "bankBook"){
+                         document.getElementById("paymentMethod").value = "무통장 입금";   
+                     }
+
+                    if (selectValue) {
+                        purchaseButton.disabled = false;
+                    } else {
+                        purchaseButton.disabled = true;
+                    }
+                     
+                }
+            });
+        });
+        
+     
+        
+
+    </script>
+  
+</main>
+<th:block th:insert = "~{/product/layout/footer.html}" />

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfrontend=self.webpackChunkfrontend||[]).push([[2108],{2108:function(e,n,t){t.r(n);var r=t(9439),l=t(2791),a=t(7689),u=(t(9434),t(8517),t(9717),t(184));n.default=function(e){var n=e.children,t=(0,l.useState)(localStorage.getItem("email")),c=(0,r.Z)(t,2),s=c[0];return c[1],(0,u.jsx)(u.Fragment,{children:null===s?(0,u.jsx)(a.Fg,{to:"/"}):{children:n}})}}}]);
+//# sourceMappingURL=2108.febfadca.chunk.js.map

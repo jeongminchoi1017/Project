@@ -1,0 +1,44 @@
+<th:block th:insert="~{/admin/_header.html}"/>
+<th:block th:insert="~{/admin/_aside.html}"/>
+        <section id="admin-cs-notice-view">
+            <nav>
+                <h3>자주묻는질문 보기</h3>
+                <p>
+                    HOME &gt; 고객센터 &gt; <strong>자주묻는질문</strong>
+                </p>
+            </nav>
+            <nav></nav>
+            <article>
+                <div class="content">
+                    <table>
+                        <tr>
+                            <td>유형</td>
+                            <td>
+                                <th:block th:each="c2 : ${cate2}">
+                                    <th:block th:each="c3 : ${cate3}">
+                                        <span th:if="${c2.cate2==view.cate2 and c3.cate3==view.type}" th:text="${c2.detail + ' · ' + c3.detail}"></span>
+                                    </th:block>
+                                </th:block>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>제목</td>
+                            <td>[[${view.title}]]</td>
+                        </tr>
+                        <tr>
+                            <td>내용</td>
+                            <td>
+                                <pre>[[${view.content}]]</pre>
+                            </td>
+                        </tr>
+                  </table>
+                </div>
+                <a th:href="@{/admin/cs/faq/list}" class="btnList">목록</a>
+                <a th:href="@{/admin/cs/faq/modify(no=${view.no})}" class="btnModify">수정</a>
+                <a th:href="@{/admin/cs/faq/delete(chk=${view.no})}" class="btnDelete">삭제</a>
+            </article>
+        </section>
+    </div>
+</section>
+    </main>
+<th:block th:insert="~{/admin/_footer.html}"/>

@@ -1,0 +1,209 @@
+* {
+    font-size: 13px;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+#admin {
+    font-family: SUITE-Regular;
+    flex-direction: column;
+    min-height: 70vh;
+    width: 1200px !important;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+/* button, a */
+.btnWrite {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+}
+.btnWrite:hover {
+    background-color: #c2c2c2;
+    border: 1px solid transparent;
+    color: #fff;
+    text-decoration: none;
+}
+.btnDelete {
+    display: inline-block;
+    padding: 5px 15px;
+    border: none;
+    font-weight: bold;
+}
+.btnDelete:hover {color: white;}
+/* ========== 레이아웃 설정 ========== */
+#adminIndex > div {
+    width: 1200px !important;
+    margin: 0 auto;
+}
+#adminMenuRegister > div {
+    width: 1200px !important;
+    margin: 0 auto;
+}
+
+/* ========== aside menu ========== */
+#admin div.col-sm-2 {
+    width: 170px !important;
+}
+.asideMenu, .asideMenu > a {
+    font-size: 15px;
+}
+#admin .todayDate > h2 {
+    font-size: 22px;
+    font-family: "SUITE-Regular";
+    font-weight: bold;
+    margin-left: 14px;
+    color: dimgray;
+}
+#admin div > div > div > button > ul {
+    display: none;
+}
+#admin div > div > div > button:hover > ul {
+    display: block;
+}
+#admin div > div > div > button > ul > li {
+    padding-top: 6px;
+}
+
+/* ========== adminNoticeList ========== */
+#adminNoticeList .new-notice-write {
+    display: flex;
+    justify-content: center;
+}
+#adminNoticeList .new-notice-write > a {
+    width: 300px;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+#adminNoticeList .accordion .accordion-header {
+    line-height: 34px;
+}
+#adminNoticeList .accordion h2 > button > .date {
+    position: absolute;
+    right: 48px;
+    color: #818181;
+}
+#adminNoticeList .accordion .accordion-button:focus { box-shadow: none;}
+#adminNoticeList .accordion .accordion-button:not(.collapsed) {background-color: transparent;}
+#adminNoticeList .accordion-body > p:nth-of-type(1) {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+}
+#adminNoticeList .accordion-body > p:nth-of-type(2) {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#adminNoticeList .paging {
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+}
+#adminNoticeList .paging > .num.on {
+    color: #ff744d;
+    font-weight: bold;
+}
+#adminNoticeList .paging > .num {
+    font-size: 18px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+#adminNoticeList .paging > .num.disabled {
+    display: none;
+}
+
+/* content css type reset */
+#adminNoticeList .accordion-body > .typeReset a {color: #0a53be;}
+#adminNoticeList .accordion-body > .typeReset ol {padding: 0px;}
+#adminNoticeList .accordion-body > .typeReset ol > li {list-style: decimal inside; padding: 0;}
+#adminNoticeList .accordion-body > .typeReset ul > li {list-style: disc inside; padding: 0;}
+#adminNoticeList .accordion-body > .typeReset blockquote {
+    border-left: 4px solid #ccc;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-left: 16px;
+}
+#adminNoticeList .accordion-body > .typeReset .ql-align-center {text-align: center;}
+#adminNoticeList .accordion-body > .typeReset .ql-align-right {text-align: right;}
+#adminNoticeList .accordion-body > .typeReset img {cursor: default !important; max-width: 100%;}
+#adminNoticeList .accordion-body > .typeReset iframe {width: 80%; height: 300px;}
+
+/* ========== adminNoticeWrite ========== */
+#adminNoticeWrite .write-content > div:nth-of-type(1) {
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+}
+#adminNoticeWrite .write-content > div > h3 {font-weight: bold}
+#adminNoticeWrite .write-content > div:nth-of-type(2) {
+    padding: 10px;
+    box-sizing: border-box;
+}
+#adminNoticeWrite .write-content > div:nth-of-type(2) h4 {
+    margin-left: 10px;
+}
+#adminNoticeWrite .write-content > div:nth-of-type(2) .write-required {
+    font-style: normal;
+    color: #FF0000;
+    font-weight: bold;
+}
+#adminNoticeWrite .write-content > div:nth-of-type(2) input {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+#adminNoticeWrite .write-content .links {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+#adminNoticeWrite .write-content .links > .btnWrite.noticeList, .btnWrite.noticeReg {
+    width: 70px;
+    text-align: center;
+    margin-left: 5px;
+}
+#adminNoticeWrite .write-content .links > .btnWrite.noticeReg {
+    background-color: #FF5B2D;
+    color: white;
+}
+#adminNoticeWrite .write-content .links > .btnWrite.noticeReg:hover {
+    background-color: #ff7b54;
+}
+
+/* react-quill overriding */
+.ql-snow .ql-tooltip {
+    left: 313px !important;
+    top: 66px !important;
+    white-space: normal !important;
+    margin: 0 !important;
+}
+.quill iframe {
+    width: 80%;
+    height: 300px;
+}

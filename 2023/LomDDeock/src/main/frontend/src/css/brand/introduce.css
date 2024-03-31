@@ -1,0 +1,149 @@
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: SUITE-Regular;
+    color:#FF5B2D;
+}
+
+ul,li,ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #111;
+}
+input,
+textarea {
+    outline: none;
+}
+#introduce {
+    padding-bottom: 20px;
+    width:100%;
+    height:auto;
+}
+/* 내비게이션 */
+.link_menu {
+    position: fixed;
+    right:1.5rem;
+    z-index: 25;
+    bottom:calc(100% - 700px);
+}
+.link_menu a {
+    color:white;
+    font-size:20px;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+/* 회사소개 제목 */
+#root div > h3 {
+    font-family: ONE-Mobile-POP;
+    font-size: 100px;
+    margin-top:30px;
+    text-shadow: -2px 0px white, 0px 2px white, 2px 0px white, 0px -2px white;
+}
+/* 브랜드 소개 */
+.brandIntro {
+    position: relative;
+    padding: 50px;
+    width: 1400px;
+    height:550px;
+}
+.brandIntro p {
+    line-height: 75px;
+    font-size: 40px;
+    color:white;
+    font-weight: bold;
+    position: relative;
+}
+.brandContent {
+    position :absolute;
+    top:300px;
+}
+strong {
+    font-family: ONE-Mobile-POP;
+    font-weight: normal;
+    color: #A21A24;
+    text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
+}
+/* BI */
+.BI {
+    position: relative;
+    padding: 20px;
+    min-width: 1420px;
+    width: 100%;
+    height:850px;
+}
+.BI p, .logo {
+    line-height: 75px;
+    font-size: 30px;
+    color:white;
+    font-weight: bold;
+    position: relative;
+}
+.BI p {
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+}
+.BI .logo {
+    position: absolute;
+    top: 200px;
+    right: 450px;
+    width:550px;
+}
+/* 위치 옮기지 마세요 스타일 깨집니다. */
+.brandIntro, .BI, .map {
+    height:1070px;
+    box-sizing: border-box;
+}
+ /* 오시는 길 */
+#adress {
+    background-color: white;
+    border-top:3px solid #FF5B2D;
+    border-bottom:3px solid #FF5B2D;
+    margin-top:50px;
+    width:1400px;
+    height:150px;
+}
+#adress > tr >td{
+    border: 1px solid #cbbeb5;
+    padding: 10px;
+    color:black;
+}
+.mapContainer {
+    margin-top: 30px;
+    border:3px solid #FF5B2D;
+}
+
+/* 회사소개 배경화면 */
+.pin-spacer {
+    width:100%;
+    height:1070px;
+    padding: 0px;
+    z-index:-1;
+    float:none;
+    flex-shrink:1;
+    display:block;
+    margin:0px;
+    position:absolute;
+    overflow:visible;
+    box-sizing: border-box;
+}
+.bg {
+    traslate:none;
+    rotate:none;
+    scale: none;
+    transform:translate(0px, 0px);
+    top: 0px;
+    left:0px;
+    margin:0px;
+    max-width:2840px;
+    width:2840px;
+    max-height:1070px;
+    height:1070px;
+    padding: 0px;
+    box-sizing:border-box;
+    position:fixed;
+    background:url(../../images/brand/history_bg.png);
+    background-size: cover;
+}

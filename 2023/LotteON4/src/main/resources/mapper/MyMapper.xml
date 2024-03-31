@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.lotteon.mapper.MyMapper">
+
+
+    <select id="selectQnaMy" resultType="kr.co.lotteon.dto.cs.CsArticleQnaDTO">
+        select * from `lo_cs_article_qna` as a inner join `lo_cs_cate3` as b on a.`type` = b.`cate3` where a.`useyn`='Y' AND a.`parent`=0 and a.writer=#{writer} order by a.`no` DESC LIMIT #{start}, 5;
+    </select>
+
+    <select id="selectCountTotal" resultType="int">
+        select count(*) from `lo_cs_article_qna` WHERE parent = 0 AND useyn = "Y";
+    </select>
+
+    <select id="selectCoupon" resultType="kr.co.lotteon.dto.my.CouponDTO">
+        select * from `lo_my_coupon` where `cuid`=#{uid}
+    </select>
+
+    <select id="selectCouponCount" resultType="int">
+        select COUNT(*) from `lo_my_coupon` where `cuid`=#{uid}
+    </select>
+
+    <select id="selectMyMember" resultType="kr.co.lotteon.dto.MemberDTO">
+        select * from `lo_member` where `uid`=#{uid}
+    </select>
+
+    <select id="selectMyReview" resultType="kr.co.lotteon.dto.product.ProductReviewDTO">
+        select a.*,b.prodName  from `lo_product_review` as a inner join `lo_product` as b ON a.prodNo =b.prodNo  where `uid`=#{uid} order by a.revNo DESC limit #{start}, 10;
+
+    </select>
+
+    <select id="selectMyReviewCount" resultType="int">
+        select count(*) from `lo_product_review` where `uid`=#{uid}
+    </select>
+
+    <select id="selectMyReviewLimit5" resultType="kr.co.lotteon.dto.product.ProductReviewDTO">
+       select a.*,b.prodName  from `lo_product_review` as a inner join `lo_product` as b ON a.prodNo =b.prodNo  where `uid`=#{uid} order by a.revNo DESC limit 5;
+    </select>
+
+    <select id="selectQnaMyLimit5" resultType="kr.co.lotteon.dto.cs.CsArticleQnaDTO">
+        select a.*,b.detail from `lo_cs_article_qna` as a inner join `lo_cs_cate3` as b on a.`type` = b.`cate3` where a.`useyn`='Y' AND a.`parent`=0 and a.writer=#{uid} order by a.`no` DESC LIMIT 5;
+    </select>
+
+    <select id="selectProductMyLimit5" resultType="kr.co.lotteon.dto.product.ProductOrderItemDTO">
+        select b.*,a.ordUid from `lo_product_order` as a inner join `lo_product_order_item` as b ON a.ordNo=b.ordNo  where a.ordUid  =#{uid} ORDER by ordNo DESC limit 5;
+    </select>
+
+    <select id="selectProductMyHomeLimit5" resultType="kr.co.lotteon.dto.product.ProductOrderItemDTO">
+        select a.price ,a.ordNo,a.prodNo ,a.`count` ,a.`itemNo` ,b.thumb1,b.prodName,b.prodCate1 ,b.prodCate2,b.seller,c.company,d.ordUid ,d.ordDate,d.ordStatus  from `lo_product_order_item` as a
+        inner join lo_product as b on a.prodNo =b.prodNo
+        inner join lo_member as c on b.seller =c.uid
+        INNER join lo_product_order as d on a.ordNo =d.ordNo
+        where d.ordUid=#{uid} ORDER by d.ordDate DESC LIMIT 5;
+    </select>
+
+    <select id="selectOrderStatus" resultType="kr.co.lotteon.dto.product.ProductOrderDTO">
+        select ordstatus from `lo_product_order`
+        where ordno=#{no} and ordUid=#{uid};
+    </select>
+
+    <select id="selectReviewstatus" resultType="int">
+        select count(*) from `lo_product_review`
+        where ordno=#{ordno} and uid=#{uid} and prodno=#{prodno} and useyn='Y'
+    </select>
+
+    <select id="selectProduct" resultType="kr.co.lotteon.dto.product.ProductDTO">
+        select * from `lo_product`
+        where prodno=#{prodno}
+    </select>
+
+    <insert id="writeReview">
+        insert into `lo_product_review` (`prodNo`,`content`,`uid`,`rating`,`regip`,`rdate`)
+        values (#{prodNo},#{content},#{uid},#{rating},#{regip},#{rdate})
+    </insert>
+
+    <insert id="insertPoint">
+        insert into `lo_member_point` (`uid`,`ordno`,`point`,`pointDate`,`descript`)
+        values (#{uid},#{no},#{point},#{rdate},#{descript})
+    </insert>
+
+    <update id="updateOrderStatus">
+        update `lo_product_order` set `ordStatus`=2 where `ordno`=#{ordno} and `ordUid`=#{uid}
+    </update>
+
+    <select id="selectSeller" resultType="kr.co.lotteon.dto.MemberDTO">
+        select * from `lo_member`
+        where uid=#{seller}
+    </select>
+
+    <select id="selectOrderItem" resultType="kr.co.lotteon.dto.product.ProductOrderItemDTO">
+        SELECT a.*,b.recipName ,b.recipHp, b.recipZip ,b.recipAddr1 ,b.recipAddr2 ,b.ordDate ,c.thumb1 , c.company ,c.prodName ,c.prodCate1 ,c.prodCate2  from lo_product_order_item as a
+          inner join lo_product_order as b on a.ordNo  = b.ordNo
+          inner join lo_product as c on a.prodNo  =c.prodNo
+        where a.itemNo =#{itemNo};
+
+    </select>
+</mapper>

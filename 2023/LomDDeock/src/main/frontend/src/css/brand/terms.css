@@ -1,0 +1,70 @@
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    font-size:15px;
+}
+#termsList > div > ul >li {
+    float: right;
+    margin-right: 30px;
+    width: 100px;
+    text-align: center;
+}
+ul,li,ol {
+    list-style: none;
+}
+svg {
+    display: block;
+    margin:auto;
+    color:#A21A24;
+}
+#terms a {
+    text-decoration: none;
+    color: #111;
+}
+input,
+textarea {
+    outline: none;
+}
+
+#terms {
+    padding-bottom: 20px;
+    margin:0 auto;
+    padding: 50px;
+    width:1400px;
+    height:auto;
+}
+/*terms 제목 및 list*/
+#termsList {
+    position: relative;
+    width:1400px;
+    height: 100px;
+    border-bottom: 3px solid #A21A24;
+    font-family: SUITE-Regular;
+    margin-bottom: 10px;
+}
+#termsList > h2 {
+    font-size: 40px;
+    font-weight: bolder;
+}
+#termsList >div {
+    position:absolute;
+    bottom: 10px;
+    right:0px;
+}
+/*terms 내용*/
+.termsContent{
+    margin-top:30px;
+}
+.termsContent div{
+    padding-top:10px;
+    padding-bottom:10px;
+    border-bottom: 1px solid #d7a39c;
+}
+#termsSort {
+    font-family: SUITE-Regular;
+    font-size: 30px;
+    font-weight:bold;
+    text-shadow: -2px 0px white, 0px 2px white, 2px 0px white, 0px -2px white;
+    line-height: 80px;
+}

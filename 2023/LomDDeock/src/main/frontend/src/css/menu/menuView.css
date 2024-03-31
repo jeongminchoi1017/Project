@@ -1,0 +1,250 @@
+.description {
+    font-weight: bold;
+    margin: 0px 0px 10px 0px;
+}
+
+.menuDescription {
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+    margin: 0px;
+    box-sizing: border-box;
+    margin-left: auto;
+}
+
+.menuView {
+    width: 1000px;
+    height: auto;
+    min-height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+.thumb {
+    position: sticky;
+    top: 10px;
+    float: left;
+    width: 400px;
+    height: 400px;
+}
+
+.menuName {
+    font-weight: bold;
+}
+
+.menuSelection {
+    width: 50%;
+    height: auto;
+    min-height: 400px;
+    text-align: left;
+    padding: 10px;
+    margin-left: auto;
+}
+.btn-so {
+    background-color: green;
+    color: white;
+}
+.menuSizeButton {
+    border-radius: 50px !important;
+    margin: 0px 20px;
+}
+
+.selectSize {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+    box-sizing: border-box;
+}
+
+.selectSpicy {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+    box-sizing: border-box;
+}
+
+.selectTopping {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+    box-sizing: border-box;
+}
+
+.toppingThumb {
+    width: 60px;
+}
+
+.toppingCount {
+    flex: none !important;
+    width: 50px !important;
+    border: 1px solid #6c757d;
+}
+
+.toppingButton {
+    width: 35px;
+}
+
+.toppingTableArea {
+    max-height: 400px;
+    overflow: scroll;
+}
+
+.toppingTable th {
+    border: none;
+}
+
+.toppingTable td {
+    vertical-align: middle;
+    border: none;
+}
+
+.toppingThumbArea {
+    width: 10%;
+}
+
+.toppingInfoArea {
+    width: 55%;
+}
+
+.toppingInfoArea > p {
+    margin: 0px;
+}
+
+.toppingCountArea {
+    width: 35%;
+}
+
+.selectItemCount {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+    box-sizing: border-box;
+}
+
+.itemCount {
+    border: 1px solid #6c757d;
+}
+
+.itemButton {
+    width: 35px;
+}
+
+.selectSide {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.sideTabs > li {
+    width: 50%;
+}
+
+.sideTabs > li > button{
+    width: 100%;
+}
+
+.sideTab {
+    height: 350px;
+    overflow-y: scroll;
+}
+
+.sideButton {
+    width: 35px;
+}
+
+.sideTable th {
+    border: none;
+}
+
+.sideTable td {
+    vertical-align: middle;
+    border: none;
+}
+
+.sideThumbArea {
+    width: 15%;
+}
+
+.sideInfoArea {
+    width: 55%;
+}
+
+.sideInfoArea > p {
+    margin: 0px;
+}
+
+.sideCountArea {
+    width: 30%;
+}
+
+.sideSpecialDel {
+
+}
+
+.sideSpecialStrong {
+    margin-left: 5px;
+}
+
+.orderProgress {
+    width: 100%;
+    min-width: 1200px;
+    height: 205px;
+    position: fixed;
+    bottom: 0;
+    background-color: #e9e9e9;
+    z-index: 99;
+}
+
+.orderProgressTable {
+    height: 100%;
+    background-color: #e9e9e9;
+}
+
+.orderProgressTable th {
+    border: none;
+}
+
+.orderProgressTable td {
+    background-color: #e9e9e9;
+    border: none;
+}
+
+.orderProgressCol1 {
+    width: 28%;
+}
+
+.orderProgressCol2 {
+    width: 28%;
+}
+
+.orderProgressCol3 {
+    width: 28%;
+}
+
+.orderProgressCol4 {
+    width: 16%;
+}
+
+.orderProgressRow1 {
+    height: 35px;
+}
+
+.orderProgressTable td {
+    padding: 10px 20px;
+}
+
+.orderTotalPrice {
+    margin-left: 10px;
+}
+
+.orderProgressRow1 strong {
+    font-size: 20px;
+}
+
+.orderButton {
+    padding: 10px 40px;
+}

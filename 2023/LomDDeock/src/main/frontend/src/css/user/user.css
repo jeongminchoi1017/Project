@@ -1,0 +1,62 @@
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,li,ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #111;
+}
+input,
+textarea {
+    outline: none;
+}
+
+#wrapper {
+    width: 100%;
+}
+
+.container {padding-bottom: 20px;}
+.logo {
+    width:250px;
+}
+
+
+.title {height:74px; line-height:74px; margin-bottom:10px; padding-bottom:0;}
+h2 {text-align: center; display:block; padding:0 2px 20px; margin-top:15px; line-height:18px; font-weight:bold; border-bottom:2px solid #545557;}
+strong{text-align: center; display:block; padding:0 2px 8px; margin-top:15px; font-size:15px; line-height:18px; font-weight:bold; border-bottom:2px solid #545557;}
+li#kkLoginBtn a {display:block;  height:56px; padding-left:35px; background:#ffe812 url("../../images/user/ic-kakao-02.png") no-repeat 120px 21px; background-size:18px 17px; color:#262626; box-sizing:border-box; font-size:16px; line-height:56px; text-align:center;}
+li#kkLoginBtn a img{display:inline-block; margin-right:3px; margin-left:-20px; margin-bottom:2px;}
+li#nvLoginBtn a {display:block;  height:56px; padding-left:35px; background:url("../../images/user/ic-naver-02.png") no-repeat 125px center / 16px 14px #57b04b; color:#fff; box-sizing:border-box; font-size:16px; line-height:56px; text-align:center; margin-top: 8px; margin-bottom: 8px;}
+li#ggLoginBtn a {display:block;  height:56px; padding-left:35px; background:url("../../images/user/ic-google-02.png") no-repeat 120px center / 30px 30px #EFEDEF; color:#262626; box-sizing:border-box; font-size:16px; line-height:56px; text-align:center;}
+#loginCol {margin-bottom:50px}
+#loginCol > Form {margin:20px}
+#loginCol > Form button {margin-top:10px;}
+#loginCol > Form span a{margin-top: 10px;}
+#loginCol > Form span a:nth-child(1) {float:left;}
+#loginCol > Form span a:nth-child(2) {float:right;}
+h2 {text-align: center; display:block; padding:0 2px 20px; margin-top:15px; line-height:18px; font-weight:bold; border-bottom:2px solid #545557;}
+.card {margin: 20px;}
+.form-check-reverse {
+    padding-right: 2.5em;
+}
+.input-group> .form-control {width:30%;}
+#mailAt {width: 1%;}
+.confirmEmailForm {
+    line-height:50px;
+    margin-bottom: 50px;
+}
+.resetPass {
+    line-height:50px;
+    margin-bottom: 50px;
+}
+
+.w100p {
+    width: 100% !important;
+}
+
+li#kkLoginBtn .kkLogin {display:block;  height:56px; padding-left:35px; background:#ffe812 url("../../images/user/ic-kakao-02.png") no-repeat 120px 19px; background-size:18px 17px; color:#262626; box-sizing:border-box; font-size:16px; line-height:56px; text-align:center;}

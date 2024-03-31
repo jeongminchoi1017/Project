@@ -1,0 +1,104 @@
+<th:block th:insert="~{/my/layout/header.html}"/>
+<script>
+    $(function() {
+        $('.btnConfirm').click(function () {
+            $('.dateForm').submit();
+        });
+    });
+</script>
+<script th:src="@{/js/my/home.js}"></script>
+            <div class="ordered">
+                <th:block th:insert="~{/my/layout/aside.html}"/>
+                    <article>
+                        <h3>전체주문내역</h3>
+
+                        <div class="byDate">
+                            <span class="tit">기간별조회</span>
+                            <ul class="date_3ea">
+                                <li><a th:href="@{/my/order(ordUid=${#authentication.principal.member.uid},dateType=day7)}" th:class="${orderDTO.getDateType() eq 'day7'?'on':''}"><em>1</em>주일</a></li>
+                                <li><a th:href="@{/my/order(ordUid=${#authentication.principal.member.uid},dateType=day15)}" th:class="${orderDTO.getDateType() eq 'day15'?'on':''}"><em>15</em>일</a></li>
+                                <li><a th:href="@{/my/order(ordUid=${#authentication.principal.member.uid},dateType=month1)}" th:class="${orderDTO.getDateType() eq 'month1'?'on':''}"><em>1</em>개월</a></li>
+                            </ul>
+                            <ul class="date_5ea">
+                                <li><a th:href="@{/my/order(ordUid=${#authentication.principal.member.uid},dateType=month_0)}" th:class="${orderDTO.getDateType() eq 'month_0'?'on':''}"><em th:text="${#dates.createNow().getMonth()+1}"></em>월</a></li>
+                                <li th:if="${#dates.createNow().getMonth() gt 0}"><a th:href="@{/my/order(ordUid=${#authentication.principal.member.uid},dateType=month_1)}" th:class="${orderDTO.getDateType() eq 'month_1'?'on':''}"><em th:text="${#dates.createNow().getMonth()}"></em>월</a></li>
+                                <li th:if="${#dates.createNow().getMonth() -1 gt 0}"><a th:href="@{/my/order(ordUid=${#authentication.principal.member.uid},dateType=month_2)}" th:class="${orderDTO.getDateType() eq 'month_2'?'on':''}"><em th:text="${#dates.createNow().getMonth()-1}"></em>월</a></li>
+                                <li th:if="${#dates.createNow().getMonth() -2 gt 0}"><a th:href="@{/my/order(ordUid=${#authentication.principal.member.uid},dateType=month_3)}" th:class="${orderDTO.getDateType() eq 'month_3'?'on':''}"><em th:text="${#dates.createNow().getMonth()-2}"></em>월</a></li>
+                                <li th:if="${#dates.createNow().getMonth() -3 gt 0}"><a th:href="@{/my/order(ordUid=${#authentication.principal.member.uid},dateType=month_4)}" th:class="${orderDTO.getDateType() eq 'month_4'?'on':''}"><em th:text="${#dates.createNow().getMonth()-3}"></em>월</a></li>
+
+                            </ul>
+                            <form th:action="@{/my/order}" class="dateForm" method="get">
+                                <p>
+                                    <input type="date" name="beginDate"><span>~</span><input type="date" name="endDate">
+                                    <input type="hidden" name="ordUid" th:value="${#authentication.principal.member.uid}">
+                                    <input type="hidden" name="dateType" value="period">
+                                </p>
+                            </form>
+                            <button class="btnConfirm">조회하기</button>
+                        </div>
+
+                        <table border="0">
+                            <th:block th:if="${#lists.isEmpty(orderDTO.getDtoList())}">
+                                <tr th:if="${#lists.isEmpty(orderDTO.getDtoList())}">
+                                    <td style="text-align: center">등록된 주문이 없습니다.</td>
+                                </tr>
+                            </th:block>
+                            <th:block th:unless="${#lists.isEmpty(orderDTO.getDtoList())}">
+                                <tr>
+                                    <th>날짜</th>
+                                    <th>상품정보</th>
+                                    <th>상태</th>
+                                    <th>확인/신청</th>
+                                </tr>
+
+
+                                <tr th:each="order:${orderDTO.getDtoList()}">
+                                    <td class="date">[[${order.getOrdDate()}]]</td>
+                                    <td>
+                                        <a th:href="@{/product/view(prodCate1=${order.getProdCate1()}, prodCate2=${order.getProdCate2()}, prodNo=${order.getProdNo()}, price=${order.getPrice()})}"  class="thumb"><img th:src="@{/thumbs/}+${order.prodCate1}+'/'+${order.prodCate2}+'/'+${order.thumb1}" th:alt="${order.getProdName()}"></a>
+                                        <ul>
+                                            <li class="company" th:onclick="seller([[${order.seller}]],[[${order.ordUid}]])">[[${order.getCompany}]]</li>
+                                            <li class="prodName"><a th:href="@{/product/view(prodCate1=${order.getProdCate1()}, prodCate2=${order.getProdCate2()}, prodNo=${order.getProdNo()}, price=${order.getPrice()})}">[[${order.getProdName()}]]</a></li>
+                                            <li>수량 : <span class="prodCount">[[${order.getCount()}]]</span>개 / 주문번호 : <span class="ordNo" th:onclick="product([[${order.itemNo}]])">[[${order.getOrdNo()}]]</span></li>
+                                            <li class="prodPrice" th:text="${#numbers.formatInteger((order.getPrice()-(order.getPrice()*(order.getDiscount()*0.01))), 3, 'COMMA')}"></li>
+                                        </ul>
+                                    </td>
+                                    <td class="status" th:if="${order.ordStatus eq 1}">배송 중</td>
+                                    <td class="status" th:if="${order.ordStatus eq 2}">배송 완료</td>
+                                    <td class="confirm">
+                                        <a href="#" class="receive" th:onclick="'javascript:receivePop(' + ${order.ordNo} + '); return false;'">수취확인</a>
+                                        <a href="#" class="review" th:onclick="'javascript:reviewPop(' + ${order.prodNo} + ', ' + ${order.ordNo} + ','+${order.price}+'); return false;'">상품평</a>
+                                        <a href="#" class="refund">반품신청</a>
+                                        <a href="#" class="exchange">교환신청</a>
+                                    </td>
+
+                                </tr>
+                            </th:block>
+
+
+
+                        </table>
+                        <th:block th:unless="${#lists.isEmpty(orderDTO.getDtoList())}">
+                            <p class="page">
+                                <th:block th:if="${orderDTO.getPageGroupStart() gt 1}">
+                                    <a th:href="@{/my/order(ordUid=${#authentication.principal.member.uid},pg=${orderDTO.getPageGroupStart() - 1},dateType=${orderDTO.getDateType()})}" class="prev">이전</a>
+                                </th:block>
+                                <th:block th:each="num:${#numbers.sequence(orderDTO.getPageGroupStart(), orderDTO.getPageGroupEnd())}">
+                                    <a th:href="@{/my/order(ordUid=${#authentication.principal.member.uid},pg=${num},dateType=${orderDTO.getDateType()})}" th:classappend="${num eq orderDTO.getCurrentPage() ? 'on' : ''}" class="num">[[${num}]]</a>
+                                </th:block>
+                                <th:block th:if="${orderDTO.getPageGroupEnd() lt orderDTO.getLastPageNum()}">
+                                    <a th:href="@{/my/order(ordUid=${#authentication.principal.member.uid},pg=${orderDTO.getPageGroupEnd() + 1},dateType=${orderDTO.getDateType()})}" class="next">다음</a>
+                                </th:block>
+
+                            </p>
+                        </th:block>
+
+                    </article>                  
+
+                    
+
+                </section>
+
+            </div>
+        </div>
+<th:block th:insert="~{/my/layout/footer.html}"/>

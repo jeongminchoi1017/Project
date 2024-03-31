@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.lotteon.mapper.ProductOrderMapper">
+    
+    <select id="selectProductOrders" resultType="kr.co.lotteon.dto.product.ProductOrderDTO">
+        SELECT a.*, b.*, c.seller, c.prodCate1, c.prodCate2, c.company, c.thumb1, c.prodName
+        FROM lo_product_order_item AS a
+            JOIN lo_product_order AS b ON a.ordNo = b.ordNo
+            JOIN lo_product AS c ON a.prodNo = c.prodNo
+        WHERE b.ordUid = #{ordUid}
+        AND b.ordDate >= DATE_SUB(NOW(), INTERVAL 1 YEAR)
+        ORDER BY a.ordNo DESC
+        LIMIT #{startNum}, 10
+    </select>
+    <select id="selectProductOrdersDate" resultType="kr.co.lotteon.dto.product.ProductOrderDTO">
+        SELECT a.*, b.*, c.seller, c.prodCate1, c.prodCate2, c.company, c.thumb1, c.prodName
+        FROM lo_product_order_item AS a
+                 JOIN lo_product_order AS b ON a.ordNo = b.ordNo
+                 JOIN lo_product AS c ON a.prodNo = c.prodNo
+        WHERE b.ordUid = #{ordUid} AND b.ordDate BETWEEN DATE(#{beginDate})
+        AND DATE(#{endDate})
+        AND b.ordDate >= DATE_SUB(NOW(), INTERVAL 1 YEAR)
+        ORDER BY a.ordNo DESC
+        LIMIT #{startNum}, 10
+    </select>
+    
+    
+    
+    <insert id="insertOrder" useGeneratedKeys="true" keyProperty="ordNo" parameterType="kr.co.lotteon.dto.product.ProductOrderDTO">
+        
+        insert into `lo_product_order` (`ordNo`,`ordUid`,`ordCount`,`ordPrice`,`ordDiscount`, `ordDelivery`,`savePoint`, 
+                                        `usedPoint`, `ordTotPrice`, `recipName`, `recipHp`, `recipZip`, `recipAddr1`, 
+                                        `recipAddr2`, `ordPayment`, `ordComplete`, `ordStatus`, `paymentMethod`)
+        values (#{ordNo},#{ordUid},#{ordCount},#{ordPrice},#{ordDiscount},#{ordDelivery},#{savePoint}
+               ,#{usedPoint},#{ordTotPrice},#{recipName},#{recipHp},#{recipZip},#{recipAddr1}
+               ,#{recipAddr2},#{ordPayment},#{ordComplete},#{ordStatus},#{paymentMethod})
+        <selectKey resultType="Int" keyProperty="ordNo" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+            
+    </insert>
+    
+    <select id="selectOrder" resultType="kr.co.lotteon.dto.product.ProductOrderDTO">
+        SELECT * FROM `lo_product_order`
+        ORDER BY `ordNo` DESC
+        LIMIT 1;
+    </select>
+    
+    
+    <insert id="insertOrderItem" >
+        insert into `lo_product_order_item` (`itemNo`,`ordNo`,`prodNo`,`count`,`price`, `discount`,`point`,
+                                        `delivery`, `total`)
+        values (#{oderItem.itemNo},#{ordNo},#{oderItem.prodNo},#{oderItem.count},#{oderItem.price},#{oderItem.discount},#{oderItem.point}
+               ,#{oderItem.delivery},#{oderItem.total})
+    </insert>
+    
+    
+    <insert id="insertMPoint">
+        insert into `lo_member_point` (uid, ordNo, point, descript)
+        
+        values(#{mPointDto.uid}, #{ordNo},#{mPointDto.point},#{mPointDto.descript})
+
+    </insert>
+    
+    <update id="updatePoint">
+        update `lo_member`
+        set  `point` = #{point}
+        where `uid` = #{memberDTO.uid}
+    </update>
+    
+</mapper>

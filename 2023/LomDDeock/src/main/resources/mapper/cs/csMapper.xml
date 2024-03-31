@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lomDDeock.mapper.cs.CsMapper">
+
+
+    <select id="selectCountCs">
+        SELECT COUNT(*) FROM `cs` a
+        <include refid="sortBox"/>
+    </select>
+
+    <select id="selectCss" resultType="lomDDeock.dto.cs.CsDTO">
+        SELECT * FROM `cs` a
+        JOIN `cs_cate` AS b ON a.cate = b.cateNo
+        <include refid="sortBox"/>
+        ORDER BY a.cno DESC
+        LIMIT #{start},10
+    </select>
+    <sql id="sortBox">
+        <choose>
+            <!-- 카테고리 구분 -->
+            <when test="cate >= 10">
+                WHERE a.`cate`=#{cate}
+            </when>
+            <when test="cate == null or cate == 0">
+                WHERE a.`cate` > 0
+            </when>
+        </choose>
+        AND a.`group`='faq' AND a.`status` >= 0
+    </sql>
+
+    <select id="selectCountNotice">
+        SELECT COUNT(*) FROM `cs` a WHERE `group`='notice' AND a.`status` >= 0
+    </select>
+
+    <select id="selectNotice" resultType="lomDDeock.dto.cs.CsDTO">
+        SELECT * FROM `cs` a
+        WHERE a.`group`='notice' AND a.`status` >= 0
+        ORDER BY a.cno DESC
+        LIMIT #{start},10
+    </select>
+
+
+    <select id="getMyQnaListTotal" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        FROM `cs`
+        WHERE `registant` = #{email}
+        <if test="cateNo != '' and cateNo != null and cateNo != 0">
+            AND `cate` = #{cateNo}
+        </if>
+    </select>
+    <select id="getMyQnaList" resultType="lomDDeock.dto.cs.CsDTO">
+        SELECT a.`cno` AS cno,
+        a.`group` AS `group`,
+        a.`cate` AS cate,
+        a.`title` AS title,
+        a.`content` AS content,
+        a.`registant` AS registant,
+        a.`regip` AS regip,
+        a.`rdate` AS rdate,
+        a.`beginDate` AS beginDate,
+        a.`period` AS period,
+        a.`status` AS status,
+        b.`cateName` AS cateName
+        FROM `cs` AS a
+        LEFT OUTER JOIN `cs_cate` AS b ON a.`cate` = b.`cateNo`
+        WHERE a.`registant` = #{email}
+        <if test="cateNo != '' and cateNo != null and cateNo != 0">
+            AND a.`cate` = #{cateNo}
+        </if>
+        LIMIT #{pg}, 10
+    </select>
+    <select id="getQnaListTotal" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        FROM `cs`
+        WHERE 1 = 1
+        <if test="cateNo != '' and cateNo != null and cateNo != 0">
+            AND `cate` = #{cateNo}
+        </if>
+        <if test="search != '' and search != null">
+            AND (`title` LIKE  CONCAT('%', #{search}, '%') OR `content` LIKE  CONCAT('%', #{search}, '%'))
+        </if>
+    </select>
+    <select id="getQnaList" resultType="lomDDeock.dto.cs.CsDTO">
+        SELECT a.`cno` AS cno,
+        a.`group` AS `group`,
+        a.`cate` AS cate,
+        a.`title` AS title,
+        a.`content` AS content,
+        a.`registant` AS registant,
+        a.`regip` AS regip,
+        a.`rdate` AS rdate,
+        a.`beginDate` AS beginDate,
+        a.`period` AS period,
+        a.`status` AS status,
+        b.`cateName` AS cateName,
+        c.`qno` AS qno,
+        c.`manager` AS manager,
+        c.`reply` AS reply,
+        c.`rdate` AS replyDate
+        FROM `cs` AS a
+        LEFT OUTER JOIN `cs_cate` AS b ON a.`cate` = b.`cateNo`
+        LEFT OUTER JOIN `cs_reply` AS c ON a.`cno` = c.`cno`
+        WHERE 1 = 1
+        <if test="cateNo != '' and cateNo != null and cateNo != 0">
+            AND a.`cate` = #{cateNo}
+        </if>
+        <if test="search != '' and search != null">
+            AND (a.`title` LIKE  CONCAT('%', #{search}, '%') OR a.`content` LIKE  CONCAT('%', #{search}, '%'))
+        </if>
+        LIMIT #{pg}, 10
+    </select>
+    <select id="getEventListTotal" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        FROM `cs`
+        WHERE 1 = 1
+        AND `group` = 'event'
+    </select>
+    <select id="getEventList" resultType="lomDDeock.dto.cs.CsDTO">
+        SELECT a.`cno` AS cno,
+        a.`group` AS `group`,
+        a.`cate` AS cate,
+        a.`title` AS title,
+        a.`content` AS content,
+        a.`registant` AS registant,
+        a.`regip` AS regip,
+        a.`rdate` AS rdate,
+        a.`beginDate` AS beginDate,
+        a.`period` AS period,
+        a.`status` AS status
+        FROM `cs` AS a
+        WHERE 1 = 1
+        AND a.`group` = 'event'
+        LIMIT #{pg}, 10
+    </select>
+    <select id="getNoticeListTotal" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        FROM `cs`
+        WHERE 1 = 1
+        AND `group` = 'notice'
+    </select>
+    <select id="getNoticeList" resultType="lomDDeock.dto.cs.CsDTO">
+        SELECT a.`cno` AS cno,
+        a.`group` AS `group`,
+        a.`cate` AS cate,
+        a.`title` AS title,
+        a.`content` AS content,
+        a.`registant` AS registant,
+        a.`regip` AS regip,
+        a.`rdate` AS rdate,
+        a.`beginDate` AS beginDate,
+        a.`period` AS period,
+        a.`status` AS status
+        FROM `cs` AS a
+        WHERE 1 = 1
+        AND a.`group` = 'notice'
+        LIMIT #{pg}, 10
+    </select>
+    <select id="getEventView" resultType="lomDDeock.dto.cs.CsDTO">
+        SELECT a.`cno` AS cno,
+        a.`group` AS `group`,
+        a.`cate` AS cate,
+        a.`title` AS title,
+        a.`content` AS content,
+        a.`registant` AS registant,
+        a.`regip` AS regip,
+        a.`rdate` AS rdate,
+        a.`beginDate` AS beginDate,
+        a.`period` AS period,
+        a.`status` AS status,
+        b.`cateName` AS cateName
+        FROM `cs` AS a
+        LEFT OUTER JOIN `cs_cate` AS b ON a.`cate` = b.`cateNo`
+        WHERE a.`cno` = ${cno}
+    </select>
+    <select id="getFaqListTotal" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        FROM `cs`
+        WHERE 1 = 1
+        AND `group` = 'faq'
+        AND `cate` = #{cateNo}
+    </select>
+    <select id="getFaqList" resultType="lomDDeock.dto.cs.CsDTO">
+        SELECT a.`cno` AS cno,
+        a.`group` AS `group`,
+        a.`cate` AS cate,
+        a.`title` AS title,
+        a.`content` AS content,
+        a.`registant` AS registant,
+        a.`regip` AS regip,
+        a.`rdate` AS rdate,
+        a.`beginDate` AS beginDate,
+        a.`period` AS period,
+        a.`status` AS status
+        FROM `cs` AS a
+        WHERE 1 = 1
+        AND a.`group` = 'faq'
+        AND a.`cate` = #{cateNo}
+        LIMIT #{pg}, 10
+    </select>
+    <select id="getQnaCate" resultType="lomDDeock.dto.cs.CsCateDTO">
+        SELECT a.`cateNo` AS cateNo,
+        a.`cateName` AS cateName
+        FROM `cs_cate` AS a
+    </select>
+    <select id="getQnaView" resultType="lomDDeock.dto.cs.CsDTO">
+        SELECT a.`cno` AS cno,
+        a.`group` AS `group`,
+        a.`cate` AS cate,
+        a.`title` AS title,
+        a.`content` AS content,
+        a.`registant` AS registant,
+        a.`regip` AS regip,
+        a.`rdate` AS rdate,
+        a.`beginDate` AS beginDate,
+        a.`period` AS period,
+        a.`status` AS status,
+        b.`cateName` AS cateName
+        FROM `cs` AS a
+        LEFT OUTER JOIN `cs_cate` AS b ON a.`cate` = b.`cateNo`
+        WHERE a.`cno` = ${cno}
+    </select>
+    <select id="getQnaReply" resultType="lomDDeock.dto.cs.CsReplyDTO">
+        SELECT a.`qno` AS qno,
+        a.`cno` AS cno,
+        a.`manager` AS manager,
+        a.`reply` AS reply,
+        a.`rdate` AS rdate
+        FROM `cs_reply` AS a
+        WHERE a.`cno` = ${cno}
+    </select>
+</mapper>

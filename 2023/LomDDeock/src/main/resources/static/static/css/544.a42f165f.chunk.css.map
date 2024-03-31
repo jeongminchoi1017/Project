@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/544.a42f165f.chunk.css","mappings":"AACA,EACI,cACJ,CAEA,YACI,oBAAqB,CACrB,UACJ","sources":["css/my/info.css"],"sourcesContent":["\r\n* {\r\n    font-size: 13px;\r\n}\r\n\r\n.check-list{\r\n    background-color: red;\r\n    color: white;\r\n}"],"names":[],"sourceRoot":""}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lomDDeock.mapper.menu.MenuMapper">
+    <select id="selectMains" resultType="lomDDeock.dto.menu.MenuDTO">
+        SELECT * FROM `menu` WHERE `deleteYN` = 'Y' ORDER BY `hit` DESC LIMIT 4;
+    </select>
+    <select id="selectMenuMenuNo" resultType="lomDDeock.dto.menu.MenuDTO">
+        SELECT * FROM `menu`
+        WHERE `deleteYN` = 'Y' AND `menuNo` = #{menuNo};
+    </select>
+    <select id="selectSizeMenuNo" resultType="lomDDeock.dto.menu.SizeDTO">
+        SELECT * FROM `menu_size` WHERE `menuNo` = #{menuNo};
+    </select>
+    <select id="selectSpicyMenuNo" resultType="lomDDeock.dto.menu.SpicyDTO">
+        SELECT * FROM `menu_spicy` WHERE `menuNo` = #{menuNo};
+    </select>
+    <select id="selectToppingMenuNo" resultType="lomDDeock.dto.menu.ToppingDTO">
+        SELECT * FROM `menu_topping` WHERE `menuNo` = #{menuNo};
+    </select>
+    <select id="selectSide" resultType="lomDDeock.dto.menu.SideDTO">
+        SELECT * FROM `menu_side_drink` WHERE `deleteYN` = 'Y';
+    </select>
+    <select id="selectMenues" resultType="lomDDeock.dto.menu.MenuDTO">
+        SELECT * FROM `menu` WHERE `deleteYN` = 'Y' ORDER BY `menuNo` DESC LIMIT #{start}, #{size};
+    </select>
+    <select id="selectSides" resultType="lomDDeock.dto.menu.SideDTO">
+        SELECT * FROM `menu_side_drink` WHERE `deleteYN` = 'Y' AND `type` = "side" ORDER BY `sideNo` DESC LIMIT #{start}, #{size};
+    </select>
+    <select id="selectDrinks" resultType="lomDDeock.dto.menu.SideDTO">
+        SELECT * FROM `menu_side_drink` WHERE `deleteYN` = 'Y' AND `type` = "drinkOrOthers" ORDER BY `sideNo` DESC LIMIT #{start}, #{size};
+    </select>
+    <select id="countMenu" resultType="int">
+        SELECT COUNT(*) FROM `menu` WHERE `deleteYN` = 'Y';
+    </select>
+    <select id="countSide" resultType="int">
+        SELECT COUNT(*) FROM `menu_side_drink` WHERE `deleteYN` = 'Y' AND `type` = "side";
+    </select>
+    <select id="countDrink" resultType="int">
+        SELECT COUNT(*) FROM `menu_side_drink` WHERE `deleteYN` = 'Y' AND `type` = "drinkOrOthers";
+    </select>
+</mapper>

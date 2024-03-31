@@ -1,0 +1,55 @@
+.menuList {
+    width: 1000px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.menuList .card-img-top {
+    height:300px;
+}
+.menuList .nav-item {
+    flex: 1;
+}
+
+.menuList .nav-item > button{
+    width: 100%;
+}
+
+.tabMenuList {
+    width: 100%;
+    height: auto;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.tabMenuList > .item-card {
+    float: left;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.menuPrice {
+    text-align: right;
+}
+/* MenuList 페이징 */
+.menuList .paging {
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+}
+.menuList .paging > .num.on {
+    color: #ff744d;
+    font-weight: bold;
+}
+.menuList .paging > .num {
+    font-size: 18px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.menuList .paging > .num.disabled {
+    display: none;
+}

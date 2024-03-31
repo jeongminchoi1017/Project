@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/914.2dd8eebb.chunk.js","mappings":"6HAMA,UANA,WACI,OACIA,EAAAA,EAAAA,KAAA,MAAAC,SAAI,UAGZ,C","sources":["pages/my/Info.js"],"sourcesContent":["function Info() {\r\n    return(\r\n        <h1>myInfo</h1>\r\n    );\r\n\r\n}\r\nexport default Info;"],"names":["_jsx","children"],"sourceRoot":""}

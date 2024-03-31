@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b8463fec-066a-4011-8344-c36d3e39a2cc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Kmarket.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Kmarket.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12b96ecf8eaa0b4abc7af5d4b5f81cff0041a881" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/a/4a59653dd40cf983dad0537f4288cbeed811ce08" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/b/7b9ba8e5c618cae38d27755b97ad588b24f0f827" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/e/ce189adb3a97146785714c4a9202f199e5d6038a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/2/12b96ecf8eaa0b4abc7af5d4b5f81cff0041a881" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/a/4a59653dd40cf983dad0537f4288cbeed811ce08" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/b/7b9ba8e5c618cae38d27755b97ad588b24f0f827" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/e/ce189adb3a97146785714c4a9202f199e5d6038a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1팀_프로젝트 결과보고서.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1팀_프로젝트 완료보고서.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket 스토리보드 v1.4.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket 프로젝트 안내.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_DB/Kmarket_SQL.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_DB/kmarket_database.mwb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_DB/kmarket_database.mwb.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/_aside.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/_footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/_header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/_aside.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/board/notice.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/config/banner.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/config/info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/config/userAdmin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/css/admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/img/admin_bg_aside.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/img/admin_bg_body.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/img/admin_bg_body1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/img/admin_bg_body2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/img/admin_bg_header.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/img/admin_bg_popup.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/img/admin_btn_close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/img/admin_ico_alert.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/img/admin_ico_error.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/img/admin_ico_info.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/img/admin_ico_success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/img/admin_login_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/img/admin_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/img/sample_thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/js/gnb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/store/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/store/userSeller.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/user/accessorTotal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/user/point.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/admin/user/user.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/cs/_aside.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/cs/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/cs/faq/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/cs/faq/view.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/cs/images/cs_sprites.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/cs/images/footer_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/cs/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/cs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/cs/notice/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/cs/notice/view.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/cs/qna/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/cs/qna/view.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/cs/qna/write.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/css/common.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/footer_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/header_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/ico_freeshipping.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/ico_great_seller.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/ico_kakaopay.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/ico_power_dealer.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/ico_rating_star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/ico_sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/ico_sprites.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/index.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/rating_star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/sample-review.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/slider_item1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/slider_item2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/slider_item3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/slider_item4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/slider_item5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/img/vip_plcc_banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/css/member.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/img/footer_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/img/header_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/img/member_btn_login.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/img/member_certifi_logo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/img/member_join_banner1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/img/member_join_banner2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/img/member_join_btn1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/img/member_join_btn2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/img/member_join_tit_normal.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/img/member_join_tit_seller.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/img/member_join_tit_welcome.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/img/member_join_txt_normal.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/img/member_join_txt_seller.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/img/member_login_banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/join.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/registerSeller.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/member/signup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/product/_aside.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/product/cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/product/complete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/product/css/product.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/product/img/ico_free_delivery.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/product/img/ico_great_seller.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/product/img/ico_kakaopay.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/product/img/ico_power_dealer.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/product/img/ico_rating_star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/product/img/ico_sprites.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/product/img/rating_star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/product/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/product/order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/product/view.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/_aside.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/board/qna.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/css/seller.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/img/admin_bg_aside copy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/img/admin_bg_aside.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/img/admin_bg_body.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/img/admin_bg_body1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/img/admin_bg_body2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/img/admin_bg_header.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/img/admin_bg_popup.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/img/admin_btn_close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/img/admin_ico_alert.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/img/admin_ico_error.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/img/admin_ico_info.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/img/admin_ico_success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/img/admin_login_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/img/admin_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/img/sample_thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/js/gnb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/order/delivery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/order/order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/product/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/seller/product/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/test copy/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_HTML/test/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/.idea/libraries/repositories_xml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.mylyn/repositories.xml.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.core.resources/.projects/.org.eclipse.egit.core.cmp/.location" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.core.resources/.root/2.tree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.jdt.core/javaLikeNames.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.mylyn.github.ui/avatars.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.tips.ide/dialog_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.ui.intro/introstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/.metadata/version.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/IndexController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/admin/IndexController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/admin/board/AdminWriteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/admin/board/FaqController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/admin/board/FaqViewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/admin/board/FaqWriterController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/admin/board/NoticeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/admin/board/NoticeWriteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/admin/board/QnaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/admin/board/ViewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/admin/config/BannerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/admin/config/InfoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/admin/config/UserAdminController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/admin/store/DeleteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/admin/store/ListController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/admin/store/UserSeller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/admin/user/AccessorTotalController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/admin/user/PointController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/admin/user/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/cs/CsDeleteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/cs/CsUpdateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/cs/CsViewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/cs/CsWriteCateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/cs/CsWriteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/cs/FaqListController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/cs/IndexController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/cs/NoticeListController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/cs/QnaListController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/member/AuthEmailController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/member/CheckHpController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/member/CheckUidController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/member/FindIdController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/member/FindIdResultController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/member/FindPassChangeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/member/FindPassController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/member/JoinController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/member/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/member/LogoutController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/member/MyInfoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/member/RegisterController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/member/RegisterSellerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/member/SignUpController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/product/CartController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/product/CompleteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/product/DeleteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/product/OrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/product/listController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/product/viewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/seller/IndexController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/seller/board/QnAController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/seller/order/DeliveryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/seller/order/OrdCompleteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/seller/order/OrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/seller/product/Cate2Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/seller/product/DeleteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/seller/product/ListController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/seller/product/ModifyController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/seller/product/RegisterController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/controller/seller/product/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dao/CartDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dao/OrderDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dao/OrderItemDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dao/ProductDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dao/cs/CsArticleDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dao/cs/CsFileDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dao/member/MemberDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dao/member/TermsDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dao/seller/Cate1DAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dao/seller/Cate2DAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/db/DBHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dto/FileDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dto/OrderDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dto/OrderItemDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dto/ProductCartDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dto/ProductDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dto/SearchDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dto/cs/CommentDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dto/cs/CsArticleDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dto/cs/CsCateAsideDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dto/cs/CsCateDetailDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dto/member/MemberDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dto/member/TermsDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dto/seller/Cate1DTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/dto/seller/Cate2DTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/filter/AutoLoginFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/filter/CheckAdminLoginFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/filter/CheckLoginFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/filter/CheckSellerLoginFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/service/CartService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/service/CsArticleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/service/FileService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/service/OrderItemService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/service/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/service/PageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/service/member/MemberService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/service/member/TermsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/service/seller/Cate1Service.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/service/seller/Cate2Service.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/java/kr/co/Kmarket/utils/Utils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/WEB-INF/classes/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/WEB-INF/lib/activation-1.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/WEB-INF/lib/cos-05Nov2002.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/WEB-INF/lib/gson-2.10.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/WEB-INF/lib/javax.mail-1.6.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/WEB-INF/lib/logback-classic-1.4.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/WEB-INF/lib/logback-core-1.4.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/WEB-INF/lib/mysql-connector-j-8.0.32.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/WEB-INF/lib/slf4j-api-2.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/_aside.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/_footer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/_header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/_aside.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/_footer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/_header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/board/faq.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/board/notice.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/board/qna.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/board/view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/board/write.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/config/banner.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/config/info.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/config/userAdmin.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/css/admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/img/admin_bg_aside.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/img/admin_bg_body.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/img/admin_bg_body1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/img/admin_bg_body2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/img/admin_bg_header.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/img/admin_bg_popup.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/img/admin_btn_close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/img/admin_ico_alert.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/img/admin_ico_error.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/img/admin_ico_info.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/img/admin_ico_success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/img/admin_login_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/img/admin_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/img/sample_thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/js/gnb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/store/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/store/userSeller.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/user/accessorTotal.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/user/point.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/admin/user/user.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/cs/_aside.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/cs/_footer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/cs/_header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/cs/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/cs/faq/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/cs/faq/view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/cs/images/cs_sprites.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/cs/images/footer_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/cs/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/cs/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/cs/js/csScript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/cs/notice/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/cs/notice/view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/cs/qna/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/cs/qna/view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/cs/qna/write.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/css/common.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/footer_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/header_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/ico_freeshipping.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/ico_great_seller.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/ico_kakaopay.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/ico_power_dealer.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/ico_rating_star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/ico_sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/ico_sprites.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/index.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/rating_star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/sample-review.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/slider_item1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/slider_item2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/slider_item3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/slider_item4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/slider_item5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/topBanner1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/img/vip_plcc_banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/js/authEmail.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/js/checkMember.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/js/validation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/js/zipcode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/_footer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/_header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/css/member.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/findId.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/findIdResult.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/findPass.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/findPassChange.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/img/chk_auth.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/img/chk_confirm.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/img/chk_id.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/img/chk_post.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/img/footer_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/img/header_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/img/member_btn_login.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/img/member_certifi_logo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/img/member_join_banner1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/img/member_join_banner2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/img/member_join_btn1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/img/member_join_btn2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/img/member_join_tit_normal.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/img/member_join_tit_seller.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/img/member_join_tit_welcome.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/img/member_join_txt_normal.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/img/member_join_txt_seller.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/img/member_login_banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/join.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/myInfo.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/registerSeller.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/member/signup.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/product/_header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/product/_nav.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/product/cart.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/product/complete.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/product/css/product.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/product/img/ico_free_delivery.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/product/img/ico_great_seller.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/product/img/ico_kakaopay.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/product/img/ico_power_dealer.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/product/img/ico_rating_star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/product/img/ico_sprites.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/product/img/rating_star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/product/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/product/order.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/product/view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/_aside.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/_footer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/_header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/board/qna.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/css/seller.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/img/admin_bg_aside copy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/img/admin_bg_aside.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/img/admin_bg_body.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/img/admin_bg_body1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/img/admin_bg_body2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/img/admin_bg_header.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/img/admin_bg_popup.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/img/admin_btn_close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/img/admin_ico_alert.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/img/admin_ico_error.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/img/admin_ico_info.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/img/admin_ico_success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/img/admin_login_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/img/admin_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/img/sample_thumb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/img/seller.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/js/gnb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/order/delivery.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/order/order.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/product/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/product/modify.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/seller/product/register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/thumb/10/10/120.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/thumb/10/10/740.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/thumb/10/10/상세.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/thumb/10/10/여성 600.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/thumb/10/11/120.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/thumb/10/11/740.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/thumb/10/11/상세.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/thumb/10/11/여성 600.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/thumb/11/11/4-600.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/thumb/11/11/460.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/thumb/11/11/5-600.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/thumb/11/11/860-460.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/thumb/14/12/120.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/thumb/14/12/240.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/upload/01a63527-e478-40c9-bf94-b3cd70eee2e5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/upload/318d5175-800c-40bb-9ad8-c704bbd80618.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/upload/4efe8926-57ed-4dff-9219-13e442bde5b2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/upload/5c2daaee-ab5b-4e4a-a893-38e9f527a5d9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/upload/adcf6bbb-827b-4ce2-8f4c-b227b9034c64.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket/src/main/webapp/upload/fa1455a5-d1d7-4765-87bc-33ab789ad1e8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kmarket_JSP/Kmarket_JSP.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LotteON4/123test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LotteON4/src/main/resources/application.yml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2ePMdK3iJN11w7NkbSyYRQ3RgKu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/wjdal/OneDrive/바탕 화면/Workspace/Project/2023/Kmarket",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8463fec-066a-4011-8344-c36d3e39a2cc" name="Changes" comment="" />
+      <created>1711801846810</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711801846810</updated>
+      <workItem from="1711801848041" duration="38000" />
+      <workItem from="1711836852923" duration="1241000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

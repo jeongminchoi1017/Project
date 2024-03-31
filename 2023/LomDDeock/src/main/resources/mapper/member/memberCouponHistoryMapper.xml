@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lomDDeock.mapper.member.MemberCouponHistoryMapper">
+    <select id="getMyCouponCount" resultType="lomDDeock.dto.member.MyCouponForm">
+        SELECT COUNT(*) AS couponCount,
+        COUNT(CASE WHEN #{today} &lt;= couponExpireDate AND couponExpireDate &lt;= #{futureDate} THEN 1 END) AS expireCount
+        FROM `memberCouponHistory`
+        WHERE `email` = #{email}
+    </select>
+    <select id="getMyCouponTotal" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        FROM `memberCouponHistory`
+        WHERE `email` = #{email}
+        <if test='useYn != "" and useYn != null and useYn != "A"'>
+            AND `useYn` = #{useYn}
+        </if>
+    </select>
+    <select id="getMyCouponList" resultType="lomDDeock.dto.member.MemberCouponHistoryDTO">
+        SELECT a.`historySeq` AS historySeq,
+        a.`email` AS email,
+        a.`couponId` AS couponId,
+        a.`couponExpireDate` AS couponExpireDate,
+        a.`useYn` AS useYn,
+        a.`createdAt` AS createdAt,
+        b.`couponName` AS couponName,
+        b.`couponApply` AS couponApply,
+        b.`discountMoney` AS discountMoney,
+        b.`discountPercent` AS discountPercent,
+        b.`discountType` AS discountType,
+        b.`discountLimit` AS discountLimit,
+        b.`couponReason` AS couponReason,
+        b.`couponCustomer` AS couponCustomer
+        FROM `memberCouponHistory` AS a
+        LEFT OUTER JOIN `coupon` AS b ON a.`couponId` = b.`couponId`
+        WHERE a.`email` = #{email}
+        <if test='useYn != "" and useYn != null and useYn != "A"'>
+            AND a.`useYn` = #{useYn}
+        </if>
+        LIMIT #{pg}, 10
+    </select>
+</mapper>

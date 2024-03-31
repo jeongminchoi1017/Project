@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 16px "Noto Sans CJK KR";
+}
+
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #111;}
+
+/* header */
+header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    z-index: 100;
+    border-bottom: 1px solid #e1e1e1;
+    transition-duration: 0.5s;
+}
+header > div {
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 16px;
+    box-sizing: border-box;
+}
+
+header ul {
+    float: right;
+    margin-top: 14px;
+    overflow: hidden;
+}
+header ul > li {
+    float: left;
+    width: 120px;
+    text-align: center;
+}
+
+header ul > li > a {
+    font-size: 18px;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #f9f9f9;
+    z-index: 100;
+}
+footer > div {
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+footer img {
+    float:left;
+    width: 100px;
+    height: 30px;
+    margin-top: 27px;
+}
+footer p {
+    float:left;
+    margin-left: 26px;
+    margin-top: 22px;
+    font-size: 13px;
+    color: #666;
+    line-height: 20px;
+}
+
+
+/* index */
+
+#index > .cover {
+    background-image: url('../../images/company/bg_company_index.jpg');
+}
+
+#index > .cover > div > p {
+    position: absolute;
+    left: 30px;
+    top: 550px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+#index > section {
+    text-align: center;
+}
+
+#index > .top-content {
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+#index > .top-content > div > p {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+#index > .cs-content > div > p {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 1.5em;
+    margin-bottom: 50px;
+}
+
+#index > .cs-section .carousel {
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+#index > .cs-section .carousel .carousel-inner{
+    border-radius: 10px;
+}
+
+#index> .cs-section .carousel-caption p {
+    color: #ffffff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#index> .cs-section .carousel-caption .black-font {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#index > .middel-section > div > p {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.5em;
+    margin-bottom: 50px;
+}
+
+#index > .table-section div table {
+    margin: 0 auto;
+}
+#index > .table-section table tr td {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    line-height: 1.5em;
+    text-align: left;
+}
+
+#index > .table-section table tr td p {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.5em;
+    margin-top: 10px;
+    border-bottom: 1px solid #959595;
+}
+
+#index > .table-section table tr td a {
+    margin-left: 50px;
+}
+
+#index .bottom-section p {
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.5em;
+    margin-top: 100px;
+    margin-bottom: 75px;
+}
+
+#index .bottom-section img {
+    margin-bottom: 150px;
+}
+
+#index .banner-section img{
+    width: 1100px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+}
+
+/* �쒕툕怨듯넻 */
+#wrapper {}
+#wrapper > header {
+    border-bottom: 1px solid rgb(255 255 255 / 10%);
+}
+
+#wrapper > header a {
+    color: #fff;
+}
+
+main > .cover {
+    width: 100%;
+    height: 670px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+main > .cover > div {
+    position: relative;
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+main > .cover > div > h1 {
+    position: absolute;
+    left: 10px;
+    top: 280px;
+    font-size: 52px;
+    font-weight: bold;
+    color: #fff;
+}
+main > .cover > div > p {
+    position: absolute;
+    left: 10px;
+    top: 380px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+}
+
+main > .content {
+    width: 1280px;
+    height: auto;
+    margin: 0 auto;
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+
+main > .content > h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 16px;
+}
+
+main > .content > p {
+    font-size: 19px;
+    line-height: 28px;
+    margin-bottom: 80px;
+}
+
+/* �뚯궗�뚭컻 */
+#introduce > .cover {
+    background-image: url('../../images/company/bg_company_introduce.jpg');
+}
+
+#introduce img {
+    display: block;
+    width: 80%;
+    margin: 28px auto;
+}
+
+/* notice List */
+#notice > .cover {
+    background-image: url('../../images/company/bg_company_notice.jpg');
+}
+
+#notice .list {
+    width: 800px;
+    margin: 28px auto;
+    padding: 20px;
+}
+
+#notice .list table {
+    width: 100%;
+}
+
+#notice .list table tr > th {
+    padding: 10px 0;
+    font-size: 13px;
+    font-weight: bold;
+    border-top: 1px solid black;
+}
+
+#notice .list table tr > th:nth-child(2) {
+    text-align: center;
+}
+
+#notice .list table tr > td {
+    border-top: 1px solid #e6e6e6;
+    padding: 10px;
+    font-size: 13px;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+}
+
+#notice .list table tr > td > a {
+    font-size: 13px;
+}
+
+#notice .list table tr > td:nth-child(1) {
+    width: 300px;
+    background: #ffffff;
+    padding: 10px;
+    text-align: left;
+}
+#notice .list table tr > td:nth-child(2) {
+    width: 100px;
+    text-align: center;
+}
+
+#notice .list .paging {
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #e6e6e6;
+}
+
+#notice .list .paging > .num > a {
+    display: inline-block;
+    min-width: 14px;
+    margin: 0 2px;
+    padding: 8px 9px;
+    color: #000;
+    font-family: Tahoma;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#notice .list .paging > .num > a:hover {
+    border: 1px solid #454c5f;
+    text-decoration: none;
+}
+#notice .list .paging > .num > a.on {
+    font-weight: bold;
+}
+
+#notice .list .paging > span > a {
+    color: rgb(119, 119, 119);
+    font-family: 돋움, Dotum, Tahoma, sans-serif;
+    font-size: 11px;
+    letter-spacing: -1px;
+}
+
+/* notice view */
+
+#notice .view{
+    width: 800px;
+    margin: 28px auto;
+    padding: 60px;
+    padding-bottom: 100px;
+}
+
+#notice .view .content {
+    width: 100%;
+    height: 100%;
+    border-top: 2px solid black;
+    border-bottom: 1px solid #959595;
+}
+
+#notice .view .content tr:nth-child(2){
+    height: 200px;
+}
+
+#notice .view .content tr td:nth-child(1){
+    width: 100px;
+    padding: 20px;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#notice .view .content tr td:nth-child(2){
+    width: 700px;
+    padding: 20px;
+    font-size: 15px;
+}
+
+#notice .view .content tr:nth-child(1) td {
+    border-bottom: 1px solid #959595;
+}
+
+#notice .view .content tr:nth-child(1) td > span {
+    font-size: 15px;
+}
+
+#notice .view > article > a {
+    float: right;
+    width: 110px;
+    height: 46px;
+    margin: 40px auto 0;
+    line-height: 32px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* promote */
+#promote {}
+#promote > .cover {
+    background-image: url('../../images/company/bg_company_promote.jpg');
+}
+#promote > .content {}
+#promote > .content > article {
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin-bottom: 26px;
+}
+#promote > .content > article > h3 {
+    position: absolute;
+    left: 740px;
+    top: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+#promote > .content > article > p {
+    position: absolute;
+    left: 740px;
+    top: 40px;
+    font-size: 18px;
+}
+
+/* �щ챸寃쎌쁺 */
+#manage > .cover {
+    background-image: url('../../images/company/bg_company_manage.jpg');
+}
+
+#manage > .content > ul {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 56px;
+}
+#manage > .content > ul > li {
+    float: left;
+    width: 25%;
+    height: 300px;
+    text-align: center;
+}
+#manage > .content > ul > li > h4 {
+    margin: 12px 0;
+    font-size: 19px;
+    font-weight: bold;
+}
+#manage > .content > ul > li > p {
+    width: 200px;
+    margin: 0 auto;
+}

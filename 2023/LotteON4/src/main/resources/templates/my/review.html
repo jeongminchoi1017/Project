@@ -1,0 +1,49 @@
+<th:block th:insert="~{/my/layout/header.html}"/>
+
+            <div class="review">
+                <th:block th:insert="~{/my/layout/aside.html}"/>
+                    <article>
+                        <h3>나의리뷰</h3>
+
+                        <table border="0">
+                            <tr>
+                                <th>번호</th>
+                                <th>상품명</th>
+                                <th>내용</th>                                
+                                <th>평점</th>
+                                <th>작성일</th>
+                            </tr>
+                            <th:block th:each="review,loop : ${entityList1}">
+                                <tr>
+                                    <td class="no" th:text="${loop.count}">5</td>
+                                    <td class="prodName"><a href="#" th:text="${review.prodNo+'/'+review.prodName}">상품명</a></td>
+                                    <td class="content" th:text="${review.content}">배송이 빠릅니다. 잘 사용하겠습니다.</td>
+                                    <td class="score">
+                                        <span class="rating" th:if="${review.rating == 1}" th:classappend="star1">평점</span>
+                                        <span class="rating" th:if="${review.rating == 2}" th:classappend="star2">평점</span>
+                                        <span class="rating" th:if="${review.rating == 3}" th:classappend="star3">평점</span>
+                                        <span class="rating" th:if="${review.rating == 4}" th:classappend="star4">평점</span>
+                                        <span class="rating" th:if="${review.rating == 5}" th:classappend="star5">평점</span>
+                                    </td>
+                                    <td class="date" th:text="${review.rdate.toLocalDate()}">2024-12-12</td>
+                                </tr>
+                            </th:block>
+                        </table>
+
+                        <div class="paging">
+                        <span class="prev" th:if="${pageGroupStart > 1}">
+                            <a th:href="@{/my/review(uid=${#authentication.principal.member.uid},pg=${pageGroupStart - 1})}">이전</a>
+                        </span>
+                                <span class="num" th:each="num: ${#numbers.sequence(pageGroupStart, pageGroupEnd)}">
+                                    <a th:href="@{/my/review(uid=${#authentication.principal.member.uid},pg=${num})}" th:classappend="${num eq currentPage ? 'on' : ''}">[[${num}]]</a>
+                                </span>
+                                <span class="next" th:if="${pageGroupEnd < lastPageNum}">
+                            <a th:href="@{/my/review(uid=${#authentication.principal.member.uid},pg=${pageGroupEnd + 1})}">다음></a>
+                        </span>
+                        </div>
+                    </article>
+                </section>
+
+            </div>
+        </div>
+<th:block th:insert="~{/my/layout/footer.html}"/>

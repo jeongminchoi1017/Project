@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/351.f08ef8cb.chunk.css","mappings":"AACA,YACI,oBAAqB,CACrB,UACJ","sources":["css/my/info.css"],"sourcesContent":["\r\n.check-list{\r\n    background-color: red;\r\n    color: white;\r\n}"],"names":[],"sourceRoot":""}
