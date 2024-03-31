@@ -1,7 +1,7 @@
 <div align=center>
-
-  ![290369406-bebfd6ff-c7af-4240-ae0b-db49c65f8a55](https://github.com/jeongminchoi1017/Project/assets/153606946/85973ea9-26f8-4d3f-b0cb-39d985333201)
   
+  ![290369406-bebfd6ff-c7af-4240-ae0b-db49c65f8a55](https://github.com/jeongminchoi1017/Project/assets/153606946/b7de9a78-82fc-415d-8a03-42fcca6cc02a)
+
 </div>
 <h1>🛒프로젝트 소개</h1><br>
 jsp를 사용하여 제작한 쇼핑몰 사이트입니다.
@@ -19,7 +19,8 @@ jsp를 사용하여 제작한 쇼핑몰 사이트입니다.
 <br>
 <h1>🌟프로젝트 메인 페이지 소개</h1><br>
 
-![메인화면](https://github.com/jeongminchoi1017/Project/assets/153606946/c3439b6b-497c-4868-b5fe-f08f541a2ae9)
+![메인화면](https://github.com/jeongminchoi1017/Project/assets/153606946/c1685e01-ee5e-4e48-8ac3-db2c6efecb8e)
+
 
 <h1>🌝본인 주요 개발기능</h1>
 
@@ -137,8 +138,8 @@ jsp를 사용하여 제작한 쇼핑몰 사이트입니다.
 - 파일 업로드 경로 설정
 
   파일 업로드를 할 때 MultipartRequest를 이용해 경로 설정을 먼저 해준 뒤 파일 업로드를 하고, 이후 파라미터 값들을 받아오는 작업을 해주어야 하는데, cate2를 선택했을 때, form태그의 action 속성의 경로를 cate1과 cate2의 값을 파라미터로 넘겨주는 주소로 변경해준 다음 cate1과 cate2 값을 HttpServletRequest를 이용하여 받아와 파일 업로드를 하고, formData를 doPost로 받아올 수 있도록 하였습니다.<br>
-  ![Untitled](https://github.com/jeongminchoi1017/Project/assets/153606946/ab5ce2c2-93d3-4157-b6da-8969916ebc7a)
 
+![Untitled](https://github.com/jeongminchoi1017/Project/assets/153606946/68c3d2b0-8e14-4b18-97e0-4470d5c02de5)
 
 ```java
 $(function(){
