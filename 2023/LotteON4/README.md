@@ -1,5 +1,3 @@
-# LotteON
-
 <div align=center>
 
   ![290372891-7f59fe08-879a-4182-a260-fac95b4114a3](https://github.com/jeongminchoi1017/Project/assets/153606946/c85a5b23-3098-45c7-8858-267219507831)
