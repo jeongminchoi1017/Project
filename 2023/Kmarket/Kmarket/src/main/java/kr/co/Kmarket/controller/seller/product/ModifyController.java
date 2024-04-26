@@ -112,31 +112,6 @@ public class ModifyController extends HttpServlet{
 		MemberDTO sessUser = (MemberDTO)session.getAttribute("sessUser");
 		String seller = sessUser.getCompany();
 
-		logger.debug("prodNo : "+prodNo);
-		logger.debug("prodCate1 : "+prodCate1);
-		logger.debug("prodCate2 : "+prodCate2);
-		logger.debug("prodName : "+prodName);
-		logger.debug("descript : "+descript);
-		logger.debug("company : "+company);
-		logger.debug("price : "+price);
-		logger.debug("discount : "+discount);
-		logger.debug("point : "+point);
-		logger.debug("stock : "+stock);
-		logger.debug("delivery : "+delivery);
-		logger.debug("thumb1 : "+thumb1);
-		logger.debug("oriThumb1 : "+oriThumb1);
-		logger.debug("thumb2 : "+thumb2);
-		logger.debug("oriThumb2 : "+oriThumb2);
-		logger.debug("thumb3 : "+thumb3);
-		logger.debug("oriThumb3 : "+oriThumb3);
-		logger.debug("detail : "+detail);
-		logger.debug("oriDetail : "+oriDetail);
-		logger.debug("status : "+status);
-		logger.debug("duty : "+duty);
-		logger.debug("receipt : "+receipt);
-		logger.debug("bizType : "+bizType);
-		logger.debug("origin : "+origin);
-
 		// 카테고리 변경 했을 때 newPath
 		String newFileUrl = "/thumb/"+prodCate1+"/"+prodCate2;
 		logger.debug("newFileUrl : "+newFileUrl);

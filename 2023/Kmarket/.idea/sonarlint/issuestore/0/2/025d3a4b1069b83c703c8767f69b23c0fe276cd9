@@ -1,0 +1,54 @@
+
+j
+java:S1192†"NDefine a constant instead of duplicating this literal "fileThumb1 : " 3 times.(ûÿúÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‚ÌÀ øÿÿÿÿ
+h
+java:S3776A"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(üª¼í
+=
+java:S1075…"&Remove this hard-coded path-delimiter.(ãÃ›
+=
+java:S1075Š"&Remove this hard-coded path-delimiter.(¥³¶–
+B
+java:S1075’"&Remove this hard-coded path-delimiter.(øƒù×øÿÿÿÿ
+=
+java:S1075–"&Remove this hard-coded path-delimiter.(±Îß‚
+=
+java:S1075›"&Remove this hard-coded path-delimiter.(ûªÀÍ
+B
+java:S1075Ÿ"&Remove this hard-coded path-delimiter.(Ã·ØÉüÿÿÿÿ
+B
+java:S1075¤"&Remove this hard-coded path-delimiter.( ˜ß„ÿÿÿÿÿ
+=
+java:S1075¨"&Remove this hard-coded path-delimiter.(ùÓ¯ˆ
+=
+java:S1075­"&Remove this hard-coded path-delimiter.(…¼ş
+=
+java:S1075®"&Remove this hard-coded path-delimiter.(­·õº
+B
+java:S1075¯"&Remove this hard-coded path-delimiter.(é¢è¤øÿÿÿÿ
+=
+java:S1075°"&Remove this hard-coded path-delimiter.(ÌñÀÂ
+B
+java:S1075µ"&Remove this hard-coded path-delimiter.(äá¢ßúÿÿÿÿ
+S	java:S899·"=Do something with the "boolean" value returned by "renameTo".(œÌäš
+=
+java:S1075º"&Remove this hard-coded path-delimiter.(‰¹®‡
+X	java:S899»"=Do something with the "boolean" value returned by "renameTo".(üÏ¥àøÿÿÿÿ
+=
+java:S1075½"&Remove this hard-coded path-delimiter.(Ÿ•ü”
+S	java:S899¾"=Do something with the "boolean" value returned by "renameTo".(ÅãÛø
+B
+java:S1075À"&Remove this hard-coded path-delimiter.(êÀ€ıüÿÿÿÿ
+X	java:S899Á"=Do something with the "boolean" value returned by "renameTo".(Ç»ƒØüÿÿÿÿ
+Q	java:S899Å";Do something with the "boolean" value returned by "delete".(éÉíø
+e
+java:S4042Å"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(éÉíø
+V	java:S899É";Do something with the "boolean" value returned by "delete".(Í²¿Çøÿÿÿÿ
+j
+java:S4042É"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(Í²¿Çøÿÿÿÿ
+P	java:S899Í";Do something with the "boolean" value returned by "delete".(”¨K
+d
+java:S4042Í"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(”¨K
+V	java:S899Ñ";Do something with the "boolean" value returned by "delete".(¾ªËéıÿÿÿÿ
+j
+java:S4042Ñ"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(¾ªËéıÿÿÿÿ

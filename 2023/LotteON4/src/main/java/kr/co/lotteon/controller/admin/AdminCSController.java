@@ -23,7 +23,7 @@ public class AdminCSController {
 
     // notice part
 
-    @GetMapping("/admin/cs/notice/list")
+    @GetMapping("/admin/cs/list")
     public String noticeList(Model model, HttpServletRequest req){
 
         // 값 요청
@@ -113,36 +113,36 @@ public class AdminCSController {
         req.setAttribute("pageGroupEnd", pageGroupEnd);
         req.setAttribute("pageStartNum", pageStartNum);
 
-        return "/admin/cs/notice/list";
+        return "/admin/cs/list";
     }
 
-    @GetMapping("/admin/cs/notice/delete")
+    @GetMapping("/admin/cs/delete")
     public String noticeDelete(@RequestParam("chk") List<Integer> Nos){
         int deletedCount = service.deleteByNo(Nos);
         return "redirect:/admin/cs/notice/list";
     }
-    @GetMapping("/admin/cs/notice/view")
+    @GetMapping("/admin/cs/view")
     public String noticeView(Model model, int no){
 
         CsArticleNoticeDTO view = service.NoticeView(no);
         model.addAttribute("view", view);
 
-        return "/admin/cs/notice/view";
+        return "/admin/cs/view";
     }
 
-    @GetMapping("/admin/cs/notice/write")
+    @GetMapping("/admin/cs/write")
     public String noticeWrite(){
-        return "/admin/cs/notice/write";
+        return "/admin/cs/write";
     }
 
-    @PostMapping("/admin/cs/notice/write")
+    @PostMapping("/admin/cs/write")
     public String noticeWrite(HttpServletRequest req,CsArticleNoticeDTO dto){
         String regip = req.getRemoteAddr();
         log.info("dto : " + dto);
         service.NoticeWrite(dto,regip);
         log.info("service.NoticeWrite(dto,regip) : " + service.NoticeWrite(dto,regip));
 
-        return "redirect:/admin/cs/notice/list";
+        return "redirect:/admin/cs/list";
     }
 
 }

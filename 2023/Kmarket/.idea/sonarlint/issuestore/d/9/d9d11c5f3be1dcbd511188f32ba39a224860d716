@@ -1,0 +1,56 @@
+
+p
+java:S2293‘"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÓĞâÈ
+p
+java:S2293ä"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÓĞâÈ
+„
+java:S1192Ï"hDefine a constant instead of duplicating this literal "SELECT COUNT(*) FROM `km_product` AS a " 4 times.(†õ®şÿÿÿÿ
+p
+java:S1192ò"TDefine a constant instead of duplicating this literal "selectCountTotal : " 3 times.(ş¯äÁşÿÿÿÿ
+‰
+java:S1192”"rDefine a constant instead of duplicating this literal "AS a JOIN `km_member` AS b ON a.`seller`=b.`uid` " 4 times.(½Šµƒ
+t
+java:S1192–"XDefine a constant instead of duplicating this literal "ORDER BY `prodNo` DESC " 6 times.(üñåÖûÿÿÿÿ
+…
+java:S1192Ğ"nDefine a constant instead of duplicating this literal " JOIN `km_member` AS b ON a.`seller`=b.`uid` " 4 times.(ö
+_
+java:S1192«"HDefine a constant instead of duplicating this literal "search2" 4 times.(Œ×Ì
+_
+java:S1192­"HDefine a constant instead of duplicating this literal "search3" 4 times.(Éşúˆ
+h
+java:S1192—"LDefine a constant instead of duplicating this literal "LIMIT ?, 10" 6 times.(¾æ¦¢ûÿÿÿÿ
+_
+java:S1192©"HDefine a constant instead of duplicating this literal "search1" 4 times.(µÒÑ¦
+r
+java:S1192“"\Define a constant instead of duplicating this literal "SELECT * FROM `km_product` " 6 times.(ƒŞ§q
+f	java:S117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒŞ§q
+g	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ó˜ğ
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍŞñ
+f	java:S117æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒŞ§q
+g	java:S117ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ó˜ğ
+g	java:S117î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍŞñ
+l	java:S117Ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†õ®şÿÿÿÿ
+g	java:S117Ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ‰º¨
+l	java:S117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öÍ‹¤ıÿÿÿÿ
+l	java:S117ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í“Š¾ûÿÿÿÿ
+l	java:S117ü"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡İ¾¬ùÿÿÿÿ
+l	java:S117ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öÍ‹¤ıÿÿÿÿ
+l	java:S117Ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾©ë‹ùÿÿÿÿ
+l	java:S117Ğ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê¼ÒŸÿÿÿÿÿ
+l	java:S117Ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Úã¥…ÿÿÿÿÿ
+g	java:S117Ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ¶Õ
+l	java:S117Õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜³Øúÿÿÿÿ
+g	java:S117Ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èØÊ
+l	java:S117Ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆíöÂşÿÿÿÿ
+l	java:S117Ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â¶ûÑûÿÿÿÿ
+l	java:S117Û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸ìÄëúÿÿÿÿ
+g	java:S117Ü"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©¥ßÅ
+l	java:S117Ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ˆœ©ÿÿÿÿÿ
+g	java:S117ß"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ğÂ°
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(±‘±ğ
+i
+java:S3776Æ"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(«½›†
+N
+java:S1117€"7Rename "sql" which hides the field declared at line 18.(æË¥ö
+Ş
+java:S6541Æ"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 135 to 64, Complexity from 15 to 14, Nesting Level from 3 to 2, Number of Variables from 20 to 6.(«½›†

@@ -1,0 +1,19 @@
+
+w
+java:S1488'"\Immediately return this expression instead of assigning it to the temporary variable "path".(ğ»ƒ£øÿÿÿÿ
+s
+java:S1488P"]Immediately return this expression instead of assigning it to the temporary variable "sName".(ú½—®
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÈÔøÿÿÿÿ
+p
+java:S1450!"URemove the "logger" field and declare it as a local variable in the relevant methods.(ÜöÖ ûÿÿÿÿ
+I
+java:S1172-".Remove this unused method parameter "fileDto".(•íŒ»ûÿÿÿÿ
+E
+java:S11728"*Remove this unused method parameter "req".(Öÿƒšúÿÿÿÿ
+<
+java:S1075A"&Remove this hard-coded path-delimiter.(ôç˜î
+<
+java:S1075B"&Remove this hard-coded path-delimiter.(î–àñ
+R	java:S899D"=Do something with the "boolean" value returned by "renameTo".(Ş®Üï
+;
+java:S1075w"&Remove this hard-coded path-delimiter.(·×”?
