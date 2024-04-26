@@ -44,8 +44,8 @@
 
 **OS** : Window10<br>
 **Browser** : Chorme 117.0.5938<br>
-**Language(Server)** : Java17, Spring Boot, React Spring Security, Spring Data JPA, Mybatis
-**Language(Client)** : HTML5, CSS3, JavaScript(Es6), jQuery3.1
+**Language(Server)** : Java17, Spring Boot, Spring Security, Spring Data JPA, Mybatis
+**Language(Client)** : HTML5, CSS3, JavaScript(Es6), jQuery3.1, React
 **Library** : <br>
 spring-boot-starter-data-jpa<br>
 spring-boot-starter-oauth2-client<br>
